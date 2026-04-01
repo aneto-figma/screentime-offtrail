@@ -1,0 +1,71 @@
+.event-nav {
+  position: relative;
+  width: 100%;
+  background: var(--otds-bg-brand-secondary, #424857);
+  border-top: 1px solid var(--otds-color-dim, rgba(255, 255, 255, 0.1));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--otds-size-gap-small, 8px);
+  padding: var(--otds-size-padding-medium, 16px);
+}
+
+.event-nav__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.event-nav__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--otds-size-gap-xsmall, 4px);
+  align-items: flex-start;
+  width: 118px;
+  flex-shrink: 0;
+  font-family: var(--otds-font-family-mono, 'Geist_Mono:Regular', sans-serif);
+  font-weight: 400;
+  font-size: var(--otds-size-font-small, 14px);
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.event-nav__price {
+  color: var(--otds-color-primary, white);
+  margin: 0;
+  white-space: nowrap;
+  min-width: min-content;
+}
+
+.event-nav__time,
+.event-nav__location {
+  color: var(--otds-color-secondary, rgba(255, 255, 255, 0.6));
+  margin: 0;
+  white-space: nowrap;
+}
+
+.event-nav__spacer {
+  width: 140px;
+  height: 70px;
+  flex-shrink: 0;
+}
+
+.event-nav__home-indicator {
+  position: relative;
+  width: 100%;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+.event-nav__home-indicator-bar {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 152px;
+  height: 5px;
+  background: var(--otds-color-primary, white);
+  border-radius: 100px;
+}
