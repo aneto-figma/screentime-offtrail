@@ -1,8 +1,3 @@
-import BrandIcon from '../BrandIcon/BrandIcon'
-import Button from '../Button/Button'
-import Icon from '../Icon/Icon'
-import IconButton from '../IconButton/IconButton'
-import Wordmark from '../Wordmark/Wordmark'
 import './DesignOverview.css'
 
 const primitiveColors = [
@@ -42,21 +37,21 @@ const primitiveColors = [
 ]
 
 const semanticColors = [
-  { label: 'color-primary', value: '#ffffff', var: '--otds-color-primary' },
-  { label: 'color-secondary', value: 'rgba(255, 255, 255, 0.6)', var: '--otds-color-secondary' },
-  { label: 'color-tertiary', value: 'rgba(255, 255, 255, 0.4)', var: '--otds-color-tertiary' },
-  { label: 'color-dim', value: 'rgba(255, 255, 255, 0.1)', var: '--otds-color-dim' },
-  { label: 'color-brand-primary', value: '#ff932e', var: '--otds-color-brand-primary' },
-  { label: 'color-brand-secondary', value: '#9e4700', var: '--otds-color-brand-secondary' },
-  { label: 'color-brand-tertiary', value: '#ffbf58', var: '--otds-color-brand-tertiary' },
-  { label: 'color-alt', value: '#d2edff', var: '--otds-color-alt' },
-  { label: 'color-on-reverse', value: '#2c3039', var: '--otds-color-on-reverse' },
-  { label: 'color-on-reverse-secondary', value: 'rgba(16, 7, 27, 0.2)', var: '--otds-color-on-reverse-secondary' },
-  { label: 'color-border-primary', value: '#ffbf58', var: '--otds-color-border-primary' },
-  { label: 'color-border-secondary', value: '#bbe4ff', var: '--otds-color-border-secondary' },
-  { label: 'bg-brand-primary', value: '#10071b', var: '--otds-bg-brand-primary' },
-  { label: 'bg-brand-secondary', value: '#424857', var: '--otds-bg-brand-secondary' },
-  { label: 'bg-on-brand', value: 'rgba(255, 255, 255, 0.1)', var: '--otds-bg-on-brand' },
+  { label: 'color-primary', var: '--otds-color-primary' },
+  { label: 'color-secondary', var: '--otds-color-secondary' },
+  { label: 'color-tertiary', var: '--otds-color-tertiary' },
+  { label: 'color-dim', var: '--otds-color-dim' },
+  { label: 'color-brand-primary', var: '--otds-color-brand-primary' },
+  { label: 'color-brand-secondary', var: '--otds-color-brand-secondary' },
+  { label: 'color-brand-tertiary', var: '--otds-color-brand-tertiary' },
+  { label: 'color-alt', var: '--otds-color-alt' },
+  { label: 'color-on-reverse', var: '--otds-color-on-reverse' },
+  { label: 'color-on-reverse-secondary', var: '--otds-color-on-reverse-secondary' },
+  { label: 'color-border-primary', var: '--otds-color-border-primary' },
+  { label: 'color-border-secondary', var: '--otds-color-border-secondary' },
+  { label: 'bg-brand-primary', var: '--otds-bg-brand-primary' },
+  { label: 'bg-brand-secondary', var: '--otds-bg-brand-secondary' },
+  { label: 'bg-on-brand', var: '--otds-bg-on-brand' },
 ]
 
 const otherColors = [
@@ -226,10 +221,10 @@ function ColorPalette({ palette }) {
           <div className="color-swatch" key={swatch.var}>
             <div
               className="color-swatch-box"
-              style={{ backgroundColor: swatch.value }}
+              style={{ backgroundColor: `var(${swatch.var})` }}
             />
             <span className="color-swatch-label">{swatch.label}</span>
-            <span className="color-swatch-hex">{swatch.value}</span>
+            <span className="color-swatch-hex">{swatch.var}</span>
           </div>
         ))}
       </div>
@@ -242,10 +237,10 @@ function SemanticSwatch({ swatch }) {
     <div className="color-swatch" key={swatch.var}>
       <div
         className="color-swatch-box"
-        style={{ backgroundColor: swatch.value }}
+        style={{ backgroundColor: `var(${swatch.var})` }}
       />
       <span className="color-swatch-label">{swatch.label}</span>
-      <span className="color-swatch-hex">{swatch.value}</span>
+      <span className="color-swatch-hex">{swatch.var}</span>
     </div>
   )
 }
@@ -264,10 +259,10 @@ function TypeSample({ style }) {
   )
 }
 
-export default function DesignOverview() {
+export default function TokenOverview() {
   return (
     <div className="design-overview">
-      <h1>Design System Overview</h1>
+      <h1>Token Overview</h1>
 
       <section className="color-section">
         <h2>Primitive Colors</h2>
@@ -290,78 +285,6 @@ export default function DesignOverview() {
         {otherColors.map((palette) => (
           <ColorPalette key={palette.name} palette={palette} />
         ))}
-      </section>
-
-      <section className="icon-section">
-        <h2>Wordmark</h2>
-        <div className="icon-grid">
-          <div className="icon-item">
-            <div className="icon-preview">
-              <Wordmark />
-            </div>
-            <span className="icon-label">Wordmark</span>
-          </div>
-        </div>
-      </section>
-
-      <section className="icon-section">
-        <h2>Icons</h2>
-        <div className="icon-grid">
-          {BrandIcon.glyphs.map((glyph) => (
-            <div className="icon-item" key={glyph}>
-              <div className="icon-preview">
-                <BrandIcon glyph={glyph} />
-              </div>
-              <span className="icon-label">{glyph}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="icon-section">
-        <h2>Utility Icons</h2>
-        <div className="icon-grid">
-          {Icon.glyphs.map((glyph) => (
-            <div className="icon-item" key={glyph}>
-              <div className="icon-preview">
-                <Icon glyph={glyph} />
-              </div>
-              <span className="icon-label">{glyph}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="icon-section">
-        <h2>Buttons</h2>
-        <div className="icon-grid">
-          {Button.colours.map((colour) =>
-            Button.sizes.map((size) => (
-              <div className="icon-item" key={`${colour}-${size}`}>
-                <div className="icon-preview">
-                  <Button colour={colour} size={size} label="Button" />
-                </div>
-                <span className="icon-label">{colour} / {size}</span>
-              </div>
-            ))
-          )}
-        </div>
-      </section>
-
-      <section className="icon-section">
-        <h2>Icon Buttons</h2>
-        <div className="icon-grid">
-          {IconButton.variants.map((variant) =>
-            IconButton.sizes.map((size) => (
-              <div className="icon-item" key={`${variant}-${size}`}>
-                <div className="icon-preview">
-                  <IconButton variant={variant} size={size} glyph="caret" />
-                </div>
-                <span className="icon-label">{variant} / {size}</span>
-              </div>
-            ))
-          )}
-        </div>
       </section>
 
       <section className="type-section">
