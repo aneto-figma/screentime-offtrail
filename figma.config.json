@@ -1,7 +1,10 @@
 {
   "codeConnect": {
     "parser": "react",
-    "include": ["src/**/*.figma.tsx"],
+    "include": ["src/**/*.figma.tsx", "src/**/*.jsx"],
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "importPaths": {
       "src/*": "@/{{relativePath}}"
     }

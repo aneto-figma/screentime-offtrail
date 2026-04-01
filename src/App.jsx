@@ -3,6 +3,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import DesignOverview from './components/DesignOverview/DesignOverview'
+import PageHeader from './components/PageHeader/PageHeader'
+import Nav from './components/Nav/Nav'
+import EventNav from './components/EventNav/EventNav'
 import './App.css'
 
 function App() {
@@ -15,8 +18,63 @@ function App() {
         <nav className="app-nav">
           <button onClick={() => setView('home')}>Home</button>
           <button className="active" onClick={() => setView('design')}>Design System</button>
+          <button onClick={() => setView('components')}>Components</button>
         </nav>
         <DesignOverview />
+      </>
+    )
+  }
+
+  if (view === 'components') {
+    return (
+      <>
+        <nav className="app-nav">
+        <button onClick={() => setView('components')}>Components</button>
+          <button onClick={() => setView('home')}>Home</button>
+          <button onClick={() => setView('design')}>Design System</button>
+          <button className="active" onClick={() => setView('components')}>Components</button>
+        </nav>
+        <div style={{ padding: '20px', background: '#10071b', minHeight: '100vh' }}>
+          <div style={{ marginBottom: '40px' }}>
+            <h2 style={{ color: 'white', marginBottom: '20px' }}>Page Header</h2>
+            <PageHeader title="Explore Trails" showShareButton={true} />
+          </div>
+          
+          <div style={{ marginBottom: '40px' }}>
+            <h2 style={{ color: 'white', marginBottom: '20px' }}>Navigation (Home Active)</h2>
+            <Nav active="Home" />
+          </div>
+
+          <div style={{ marginBottom: '40px' }}>
+            <h2 style={{ color: 'white', marginBottom: '20px' }}>Navigation (Map Active)</h2>
+            <Nav active="Map" />
+          </div>
+
+          <div style={{ marginBottom: '40px' }}>
+            <h2 style={{ color: 'white', marginBottom: '20px' }}>Navigation (Profile Active)</h2>
+            <Nav active="Profile" />
+          </div>
+          
+          <div style={{ marginBottom: '40px' }}>
+            <h2 style={{ color: 'white', marginBottom: '20px' }}>Event Navigation</h2>
+            <EventNav 
+              price="Free"
+              time="8:30PM–12:00AM"
+              location="Los Angeles, CA"
+              buttonLabel="REGISTER"
+            />
+          </div>
+
+          <div style={{ marginBottom: '40px' }}>
+            <h2 style={{ color: 'white', marginBottom: '20px' }}>Event Navigation (Paid Event)</h2>
+            <EventNav 
+              price="$25"
+              time="7:00PM–11:30PM"
+              location="San Francisco, CA"
+              buttonLabel="BUY TICKETS"
+            />
+          </div>
+        </div>
       </>
     )
   }
