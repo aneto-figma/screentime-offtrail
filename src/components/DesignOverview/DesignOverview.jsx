@@ -1,6 +1,7 @@
 import BrandIcon from '../BrandIcon/BrandIcon'
 import Button from '../Button/Button'
 import Icon from '../Icon/Icon'
+import IconButton from '../IconButton/IconButton'
 import Wordmark from '../Wordmark/Wordmark'
 import './DesignOverview.css'
 
@@ -341,6 +342,22 @@ export default function DesignOverview() {
                   <Button colour={colour} size={size} label="Button" />
                 </div>
                 <span className="icon-label">{colour} / {size}</span>
+              </div>
+            ))
+          )}
+        </div>
+      </section>
+
+      <section className="icon-section">
+        <h2>Icon Buttons</h2>
+        <div className="icon-grid">
+          {IconButton.variants.map((variant) =>
+            IconButton.sizes.map((size) => (
+              <div className="icon-item" key={`${variant}-${size}`}>
+                <div className="icon-preview">
+                  <IconButton variant={variant} size={size} glyph="caret" />
+                </div>
+                <span className="icon-label">{variant} / {size}</span>
               </div>
             ))
           )}
