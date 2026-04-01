@@ -1,4 +1,7 @@
-import Icon from './Icon'
+import BrandIcon from '../BrandIcon/BrandIcon'
+import Button from '../Button/Button'
+import Icon from '../Icon/Icon'
+import Wordmark from '../Wordmark/Wordmark'
 import './DesignOverview.css'
 
 const primitiveColors = [
@@ -289,7 +292,33 @@ export default function DesignOverview() {
       </section>
 
       <section className="icon-section">
+        <h2>Wordmark</h2>
+        <div className="icon-grid">
+          <div className="icon-item">
+            <div className="icon-preview">
+              <Wordmark />
+            </div>
+            <span className="icon-label">Wordmark</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="icon-section">
         <h2>Icons</h2>
+        <div className="icon-grid">
+          {BrandIcon.glyphs.map((glyph) => (
+            <div className="icon-item" key={glyph}>
+              <div className="icon-preview">
+                <BrandIcon glyph={glyph} />
+              </div>
+              <span className="icon-label">{glyph}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="icon-section">
+        <h2>Utility Icons</h2>
         <div className="icon-grid">
           {Icon.glyphs.map((glyph) => (
             <div className="icon-item" key={glyph}>
@@ -299,6 +328,22 @@ export default function DesignOverview() {
               <span className="icon-label">{glyph}</span>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="icon-section">
+        <h2>Buttons</h2>
+        <div className="icon-grid">
+          {Button.colours.map((colour) =>
+            Button.sizes.map((size) => (
+              <div className="icon-item" key={`${colour}-${size}`}>
+                <div className="icon-preview">
+                  <Button colour={colour} size={size} label="Button" />
+                </div>
+                <span className="icon-label">{colour} / {size}</span>
+              </div>
+            ))
+          )}
         </div>
       </section>
 

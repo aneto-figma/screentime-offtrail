@@ -17,6 +17,6 @@ figma.connect(
       }),
     },
     example: ({ glyph }) => <Icon glyph={glyph} />,
-    imports: ["import Icon from '@/Icon'"],
+    imports: ["import Icon from '@/components/Icon'"],
   }
 )

@@ -31,6 +31,6 @@ figma.connect(
       }),
     },
     example: ({ glyph }) => <BrandIcon glyph={glyph} />,
-    imports: ["import BrandIcon from '@/BrandIcon'"],
+    imports: ["import BrandIcon from '@/components/BrandIcon'"],
   }
 )
