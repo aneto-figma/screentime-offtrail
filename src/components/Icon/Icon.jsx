@@ -71,6 +71,14 @@ const glyphs = {
       </>
     ),
   },
+  person: {
+    path: (
+      <>
+        <circle cx="8" cy="5" r="2.25" stroke="currentColor" strokeWidth="1.25" fill="none" />
+        <path d="M3.5 13.5c0-2.485 2.015-4.5 4.5-4.5s4.5 2.015 4.5 4.5" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" fill="none" />
+      </>
+    ),
+  },
 }
 
 export default function Icon({ glyph = 'x', className = '' }) {

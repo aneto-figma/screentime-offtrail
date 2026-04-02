@@ -4,8 +4,8 @@ figma.connect(
   "https://www.figma.com/design/9dQKfyAgC2IP6CDIKPdeFk/Offtrail?node-id=424-1419",
   {
     props: {
-      name: figma.string("name"),
-      category: figma.string("category"),
+      name: figma.string("Name"),
+      category: figma.string("Category"),
     },
     example: ({ name, category }) => (
       <CardGuide
