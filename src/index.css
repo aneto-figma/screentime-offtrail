@@ -81,6 +81,7 @@
   --otds-bg-brand-primary: #ffffff;
   --otds-bg-brand-secondary: #d2edff;
   --otds-bg-on-brand: rgba(16, 7, 27, 0.09);
+  --otds-bg-map: var(--otds-blue-300);
 
   /* --- OTDS Design System: Black Palette --- */
   --otds-black-100: #10071b;
@@ -167,6 +168,7 @@
     --otds-bg-brand-primary: #10071b;
     --otds-bg-brand-secondary: #424857;
     --otds-bg-on-brand: rgba(255, 255, 255, 0.1);
+    --otds-bg-map: var(--otds-blue-200);
   }
 
   #social .button-icon {
