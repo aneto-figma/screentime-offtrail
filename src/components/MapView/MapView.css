@@ -1,0 +1,53 @@
+.map-view {
+  position: relative;
+  overflow: hidden;
+  background: var(--otds-bg-map);
+}
+
+/* Variant: full — fills parent container */
+.map-view--full {
+  width: 100%;
+  height: 100%;
+}
+
+/* Variant: card — fixed preview size matching Figma */
+.map-view--card {
+  width: 398px;
+  height: 198px;
+  border-radius: var(--otds-size-corner-medium, 8px);
+  border: 1px solid var(--otds-color-dim);
+}
+
+/* Top shade gradient for readability */
+.map-view__shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 182px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Fallback when no token */
+.map-view__fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: var(--otds-bg-map);
+}
+
+.map-view__fallback-text {
+  font-family: var(--otds-font-family-mono, monospace);
+  font-size: var(--otds-size-font-small, 14px);
+  color: var(--otds-white-400, rgba(255, 255, 255, 0.4));
+  margin: 0;
+}
+
+/* Hide default Mapbox controls */
+.map-view .mapboxgl-ctrl-group,
+.map-view .mapboxgl-ctrl-attrib {
+  display: none;
+}
