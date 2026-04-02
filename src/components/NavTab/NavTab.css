@@ -1,0 +1,32 @@
+.nav-tab {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 48px;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.nav-tab__indicator {
+  width: 100%;
+  height: 2px;
+  flex-shrink: 0;
+  opacity: 0;
+  background: var(--otds-color-brand-primary, #ff932e);
+}
+
+.nav-tab--active .nav-tab__indicator {
+  opacity: 1;
+}
+
+.nav-tab__icon {
+  color: var(--otds-color-primary, white);
+  margin-top: auto;
+  margin-bottom: 8px;
+}
+
+.nav-tab--active .nav-tab__icon {
+  color: var(--otds-color-brand-primary, #ff932e);
+}
