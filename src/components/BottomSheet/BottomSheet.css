@@ -1,0 +1,41 @@
+.bottom-sheet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 430px;
+  background-color: var(--otds-bg-brand-primary);
+  border-radius: var(--otds-size-corner-large) var(--otds-size-corner-large) 0 0;
+  box-sizing: border-box;
+}
+
+.bottom-sheet--default {
+  height: 320px;
+}
+
+.bottom-sheet--tall {
+  height: 520px;
+}
+
+.bottom-sheet__handle-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 28px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.bottom-sheet__handle {
+  width: 40px;
+  height: 5px;
+  background-color: var(--otds-color-tertiary);
+  border-radius: var(--otds-size-corner-full);
+  flex-shrink: 0;
+}
+
+.bottom-sheet__content {
+  flex: 1 0 0;
+  width: 100%;
+  min-height: 0;
+}
