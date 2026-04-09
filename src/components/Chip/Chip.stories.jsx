@@ -9,19 +9,10 @@ export default {
   },
 }
 
-export const Active = {
+export const Default = {
   args: {
     label: 'Tag',
     active: true,
   },
 }
 
-export const Inactive = {
-  args: {
-    label: 'Tag',
-    active: false,
-  },
-  parameters: {
-    backgrounds: { default: 'dark' },
-  },
-}

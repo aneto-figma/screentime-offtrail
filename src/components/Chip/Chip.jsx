@@ -1,10 +1,13 @@
+import { useState } from 'react'
 import './Chip.css'
 
 export default function Chip({
   label = 'Tag',
-  active = false,
+  active: initialActive = false,
   className = '',
 }) {
+  const [active, setActive] = useState(initialActive)
+
   const classes = [
     'chip',
     active ? 'chip--active' : 'chip--inactive',
@@ -12,7 +15,7 @@ export default function Chip({
   ].filter(Boolean).join(' ')
 
   return (
-    <button className={classes}>
+    <button className={classes} onClick={() => setActive(a => !a)}>
       {label}
     </button>
   )
