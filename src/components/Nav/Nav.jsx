@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import NavTab from '../NavTab/NavTab'
 import './Nav.css'
 
@@ -5,6 +6,8 @@ export default function Nav({
   active = 'Home',
   className = ''
 }) {
+  const [activeTab, setActiveTab] = useState(active)
+
   const navItems = [
     { key: 'Home', icon: 'home' },
     { key: 'Map', icon: 'location' },
@@ -18,7 +21,8 @@ export default function Nav({
           <NavTab
             key={item.key}
             icon={item.icon}
-            active={active === item.key}
+            active={activeTab === item.key}
+            onClick={() => setActiveTab(item.key)}
           />
         ))}
       </div>
