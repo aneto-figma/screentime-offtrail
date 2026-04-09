@@ -1,7 +1,7 @@
 import MapView from './MapView'
 
 export default {
-  title: 'Components/MapView',
+  title: 'Components/Map/MapView',
   component: MapView,
   argTypes: {
     variant: {

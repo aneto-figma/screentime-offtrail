@@ -1,7 +1,7 @@
 import MapUserLocation from './MapUserLocation'
 
 export default {
-  title: 'Components/MapUserLocation',
+  title: 'Components/Map/MapUserLocation',
   component: MapUserLocation,
   argTypes: {
     size: {

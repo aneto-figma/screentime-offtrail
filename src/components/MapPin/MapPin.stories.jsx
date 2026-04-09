@@ -1,7 +1,7 @@
 import MapPin from './MapPin'
 
 export default {
-  title: 'Components/MapPin',
+  title: 'Components/Map/MapPin',
   component: MapPin,
 }
 
