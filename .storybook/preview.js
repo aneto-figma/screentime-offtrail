@@ -3,6 +3,40 @@ import '../src/index.css';
 /** @type { import('@storybook/react-vite').Preview } */
 const preview = {
   parameters: {
+    options: {
+      storySort: {
+        order: [
+          'Documentation',
+          'Components', [
+            'Branding', ['Logo', 'Wordmark'],
+            'Avatar',
+            'Facepile',
+            'Icon',
+            'BrandIcon',
+            'Button',
+            'IconButton',
+            'Chip',
+            'Form Fields', [
+              'TextInput',
+              'Textarea',
+              'SearchInput',
+              'Dropdown',
+              'Checkbox',
+              'Radio',
+              'RadioGroup',
+              'SwitchField',
+            ],
+            'Nav',
+            'EventNav',
+            'PageHeader',
+            'CardEvent',
+            'CardGuide',
+            'Map', ['MapView', 'MapPin', 'MapUserLocation'],
+            'WidgetCompass',
+          ],
+        ],
+      },
+    },
     controls: {
       matchers: {
        color: /(background|color)$/i,
