@@ -3,28 +3,14 @@ import Nav from './Nav'
 export default {
   title: 'Components/Nav',
   component: Nav,
-  argTypes: {
-    active: {
-      control: 'select',
-      options: ['Home', 'Map', 'Profile'],
+  parameters: {
+    backgrounds: {
+      default: 'dark',
+      values: [
+        { name: 'dark', value: '#10071b' },
+      ],
     },
   },
 }
 
-export const Home = {
-  args: {
-    active: 'Home',
-  },
-}
-
-export const Map = {
-  args: {
-    active: 'Map',
-  },
-}
-
-export const Profile = {
-  args: {
-    active: 'Profile',
-  },
-}
+export const Default = {}
