@@ -1,42 +1,27 @@
 import Dropdown from './Dropdown'
 
+const sampleOptions = [
+  { value: 'one', label: 'Option One' },
+  { value: 'two', label: 'Option Two' },
+  { value: 'three', label: 'Option Three' },
+]
+
 export default {
-  title: 'Components/Dropdown',
+  title: 'Components/Form Fields/Dropdown',
   component: Dropdown,
   argTypes: {
     label: { control: 'text' },
     description: { control: 'text' },
     showLabel: { control: 'boolean' },
     showDescription: { control: 'boolean' },
-    state: { control: 'select', options: Dropdown.states },
-    value: { control: 'text' },
+    placeholder: { control: 'text' },
   },
 }
 
-export const Placeholder = {
+export const Default = {
   args: {
     label: 'Label',
     description: 'Description',
-    state: 'Placeholder',
-    value: 'Select an option',
-  },
-}
-
-export const Active = {
-  args: {
-    label: 'Label',
-    description: 'Description',
-    state: 'Active',
-    value: 'Selected value',
-  },
-}
-
-export const WithoutLabel = {
-  args: {
-    label: 'Label',
-    description: 'Description',
-    showLabel: false,
-    state: 'Placeholder',
-    value: 'Select an option',
+    options: sampleOptions,
   },
 }

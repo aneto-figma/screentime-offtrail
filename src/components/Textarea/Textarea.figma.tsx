@@ -6,15 +6,17 @@ figma.connect(
   {
     props: {
       label: figma.string("Label"),
-      value: figma.string("Value"),
+      defaultValue: figma.string("Value"),
+      placeholder: figma.string("Value"),
       showLabel: figma.boolean("Show Label"),
       description: figma.string("Description"),
       hasDescription: figma.boolean("Has Description"),
     },
-    example: ({ label, value, showLabel, description, hasDescription }) => (
+    example: ({ label, defaultValue, placeholder, showLabel, description, hasDescription }) => (
       <Textarea
         label={label}
-        value={value}
+        defaultValue={defaultValue}
+        placeholder={placeholder}
         showLabel={showLabel}
         description={description}
         hasDescription={hasDescription}

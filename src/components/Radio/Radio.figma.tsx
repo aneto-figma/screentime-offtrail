@@ -5,7 +5,7 @@ figma.connect(
   "https://www.figma.com/design/9dQKfyAgC2IP6CDIKPdeFk/Offtrail?node-id=397-10278",
   {
     props: {
-      active: figma.enum("Active", {
+      defaultActive: figma.enum("Active", {
         True: true,
         False: false,
       }),
@@ -13,9 +13,9 @@ figma.connect(
       description: figma.string("Description"),
       showDescription: figma.boolean("Show Description"),
     },
-    example: ({ active, label, description, showDescription }) => (
+    example: ({ defaultActive, label, description, showDescription }) => (
       <Radio
-        active={active}
+        defaultActive={defaultActive}
         label={label}
         description={description}
         showDescription={showDescription}
