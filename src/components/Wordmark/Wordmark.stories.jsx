@@ -1,7 +1,7 @@
 import Wordmark from './Wordmark'
 
 export default {
-  title: 'Components/Wordmark',
+  title: 'Components/Branding/Wordmark',
   component: Wordmark,
 }
 
