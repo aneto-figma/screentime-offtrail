@@ -8,10 +8,6 @@ export default {
       control: 'select',
       options: MapView.variants,
     },
-    mode: {
-      control: 'select',
-      options: MapView.modes,
-    },
     zoom: {
       control: { type: 'range', min: 1, max: 20, step: 0.5 },
     },
@@ -22,10 +18,9 @@ export default {
   },
 }
 
-export const FullDark = {
+export const Full = {
   args: {
     variant: 'full',
-    mode: 'Dark',
     latitude: 34.07,
     longitude: -118.25,
     zoom: 12,
@@ -40,40 +35,9 @@ export const FullDark = {
   ],
 }
 
-export const FullLight = {
-  args: {
-    variant: 'full',
-    mode: 'Light',
-    latitude: 34.07,
-    longitude: -118.25,
-    zoom: 12,
-    showUserLocation: true,
-  },
-  decorators: [
-    (Story) => (
-      <div style={{ width: '430px', height: '562px' }}>
-        <Story />
-      </div>
-    ),
-  ],
-}
-
-export const CardDark = {
+export const Card = {
   args: {
     variant: 'card',
-    mode: 'Dark',
-    latitude: 34.07,
-    longitude: -118.25,
-    zoom: 14,
-    interactive: false,
-    showUserLocation: true,
-  },
-}
-
-export const CardLight = {
-  args: {
-    variant: 'card',
-    mode: 'Light',
     latitude: 34.07,
     longitude: -118.25,
     zoom: 14,
@@ -85,7 +49,6 @@ export const CardLight = {
 export const WithMarkers = {
   args: {
     variant: 'full',
-    mode: 'Dark',
     latitude: 34.07,
     longitude: -118.25,
     zoom: 12,

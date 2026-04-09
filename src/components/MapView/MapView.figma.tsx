@@ -4,15 +4,9 @@ import MapView from "./MapView"
 figma.connect(
   "https://www.figma.com/design/9dQKfyAgC2IP6CDIKPdeFk/Offtrail?node-id=4143-6986",
   {
-    props: {
-      mode: figma.enum("Mode", {
-        Dark: "Dark",
-        Light: "Light",
-      }),
-    },
-    example: ({ mode }) => (
+    props: {},
+    example: () => (
       <MapView
-        mode={mode}
         variant="full"
         latitude={34.07}
         longitude={-118.25}
@@ -30,15 +24,9 @@ figma.connect(
 figma.connect(
   "https://www.figma.com/design/9dQKfyAgC2IP6CDIKPdeFk/Offtrail?node-id=874-3762",
   {
-    props: {
-      mode: figma.enum("Mode", {
-        Dark: "Dark",
-        Light: "Light",
-      }),
-    },
-    example: ({ mode }) => (
+    props: {},
+    example: () => (
       <MapView
-        mode={mode}
         variant="card"
         interactive={false}
         latitude={34.07}

@@ -4,12 +4,8 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 import MapPin from '../MapPin/MapPin'
 import MapUserLocation from '../MapUserLocation/MapUserLocation'
 import { MAP_STYLES } from './mapStyles'
+import useSystemMode from '../../hooks/useSystemMode'
 import './MapView.css'
-
-const modeClassMap = {
-  Dark: 'map-view--dark',
-  Light: 'map-view--light',
-}
 
 const variantClassMap = {
   full: 'map-view--full',
@@ -22,7 +18,6 @@ export default function MapView({
   zoom = 12,
   interactive = true,
   variant = 'full',
-  mode = 'Dark',
   markers = [],
   showUserLocation = true,
   onMarkerClick,
@@ -31,6 +26,7 @@ export default function MapView({
 }) {
   const token = accessToken || import.meta.env.VITE_MAPBOX_TOKEN
   const mapRef = useRef()
+  const mode = useSystemMode()
 
   const [viewState, setViewState] = useState({
     longitude,
@@ -42,7 +38,7 @@ export default function MapView({
     setViewState(evt.viewState)
   }, [])
 
-  const style = MAP_STYLES[mode] || MAP_STYLES.Dark
+  const style = MAP_STYLES[mode]
 
   const applyMapConfig = useCallback(() => {
     const map = mapRef.current?.getMap()
@@ -63,7 +59,6 @@ export default function MapView({
 
   const classes = [
     'map-view',
-    modeClassMap[mode],
     variantClassMap[variant],
     className,
   ].filter(Boolean).join(' ')
@@ -127,5 +122,4 @@ export default function MapView({
   )
 }
 
-MapView.modes = Object.keys(modeClassMap)
 MapView.variants = Object.keys(variantClassMap)

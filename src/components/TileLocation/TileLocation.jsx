@@ -1,7 +1,4 @@
 import mapBg from '../../assets/images/map/map-bg.png'
-import mapPinUnionDark from '../../assets/images/map/map-pin-union-dark.png'
-import mapPinVector from '../../assets/images/map/map-pin-vector.png'
-import mapPinLight from '../../assets/images/map/map-pin-light.png'
 import radarDarkOuter from '../../assets/images/map/radar-dark-outer.png'
 import radarDarkRing from '../../assets/images/map/radar-dark-ring.png'
 import radarDarkInner from '../../assets/images/map/radar-dark-inner.png'
@@ -10,20 +7,13 @@ import radarLightOuter from '../../assets/images/map/radar-light-outer.png'
 import radarLightRing from '../../assets/images/map/radar-light-ring.png'
 import radarLightInner from '../../assets/images/map/radar-light-inner.png'
 import radarLightMid from '../../assets/images/map/radar-light-mid.png'
+import MapPin from '../MapPin/MapPin'
+import useSystemMode from '../../hooks/useSystemMode'
 import './TileLocation.css'
 
-const modeClassMap = {
-  Dark: 'tile-location--dark',
-  Light: 'tile-location--light',
-}
-
-function MapPinDark() {
-  return (
-    <div className="tile-location__pin">
-      <img className="tile-location__pin-union" src={mapPinUnionDark} alt="" />
-      <img className="tile-location__pin-vector" src={mapPinVector} alt="" />
-    </div>
-  )
+const radarImages = {
+  Dark: { outer: radarDarkOuter, ring: radarDarkRing, mid: radarDarkMid, inner: radarDarkInner },
+  Light: { outer: radarLightOuter, ring: radarLightRing, mid: radarLightMid, inner: radarLightInner },
 }
 
 function ChevronRight() {
@@ -36,10 +26,11 @@ function ChevronRight() {
 
 export default function TileLocation({
   location = 'Location',
-  mode = 'Dark',
   className = '',
 }) {
-  const classes = ['tile-location', modeClassMap[mode], className].filter(Boolean).join(' ')
+  const mode = useSystemMode()
+  const radar = radarImages[mode]
+  const classes = ['tile-location', className].filter(Boolean).join(' ')
 
   return (
     <div className={classes}>
@@ -48,16 +39,15 @@ export default function TileLocation({
       <div className="tile-location__map">
         <img className="tile-location__map-bg" src={mapBg} alt="" />
         <div className="tile-location__map-overlay" />
-        {mode === 'Dark' && <MapPinDark />}
-        {mode === 'Light' && <img className="tile-location__pin-light" src={mapPinLight} alt="" />}
+        <MapPin className="tile-location__pin" />
       </div>
 
       {/* Radar rings */}
       <div className="tile-location__radar">
-        <img className="tile-location__radar-outer" src={mode === 'Dark' ? radarDarkOuter : radarLightOuter} alt="" />
-        <img className="tile-location__radar-ring"  src={mode === 'Dark' ? radarDarkRing  : radarLightRing}  alt="" />
-        <img className="tile-location__radar-mid"   src={mode === 'Dark' ? radarDarkMid   : radarLightMid}   alt="" />
-        <img className="tile-location__radar-inner" src={mode === 'Dark' ? radarDarkInner : radarLightInner} alt="" />
+        <img className="tile-location__radar-outer" src={radar.outer} alt="" />
+        <img className="tile-location__radar-ring"  src={radar.ring}  alt="" />
+        <img className="tile-location__radar-mid"   src={radar.mid}   alt="" />
+        <img className="tile-location__radar-inner" src={radar.inner} alt="" />
       </div>
 
       {/* Text content */}
@@ -75,5 +65,3 @@ export default function TileLocation({
     </div>
   )
 }
-
-TileLocation.modes = Object.keys(modeClassMap)

@@ -50,13 +50,13 @@
 .card-event--small {
   gap: var(--otds-size-gap-medium);
   align-items: flex-start;
-  height: 70px;
+  min-height: 70px;
 }
 
 .card-event--small .card-event__image-wrap {
   position: relative;
   width: 91px;
-  height: 100%;
+  align-self: stretch;
   border-radius: var(--otds-size-corner-medium);
   overflow: hidden;
   flex-shrink: 0;
