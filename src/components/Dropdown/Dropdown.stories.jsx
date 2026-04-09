@@ -1,7 +1,7 @@
 import Dropdown from './Dropdown'
 
 export default {
-  title: 'Components/Dropdown',
+  title: 'Components/Form Fields/Dropdown',
   component: Dropdown,
   argTypes: {
     label: { control: 'text' },

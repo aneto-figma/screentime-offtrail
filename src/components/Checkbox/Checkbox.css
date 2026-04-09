@@ -3,6 +3,9 @@
   flex-direction: column;
   gap: var(--otds-size-gap-xsmall);
   align-items: flex-start;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .checkbox__row {

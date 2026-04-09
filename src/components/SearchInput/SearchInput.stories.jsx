@@ -1,24 +1,23 @@
 import SearchInput from './SearchInput'
 
 export default {
-  title: 'Components/SearchInput',
+  title: 'Components/Form Fields/SearchInput',
   component: SearchInput,
   argTypes: {
-    text: { control: 'text' },
-    state: { control: 'select', options: SearchInput.states },
+    defaultValue: { control: 'text' },
+    placeholder: { control: 'text' },
   },
 }
 
-export const Placeholder = {
+export const Empty = {
   args: {
-    text: 'Find things to do...',
-    state: 'Placeholder',
+    placeholder: 'Find things to do...',
   },
 }
 
-export const Active = {
+export const WithValue = {
   args: {
-    text: 'Hiking trails',
-    state: 'Active',
+    defaultValue: 'Hiking trails',
+    placeholder: 'Find things to do...',
   },
 }

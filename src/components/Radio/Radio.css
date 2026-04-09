@@ -3,6 +3,9 @@
   gap: var(--otds-size-gap-small);
   align-items: flex-start;
   width: 360px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .radio__circle {

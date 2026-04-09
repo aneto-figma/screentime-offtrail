@@ -1,24 +1,42 @@
+import { useState } from 'react'
 import BrandIcon from '../BrandIcon/BrandIcon'
 import './SearchInput.css'
 
-const stateClassMap = {
-  Placeholder: 'search-input--placeholder',
-  Active: 'search-input--active',
-}
-
 export default function SearchInput({
-  text = 'Find things to do...',
-  state = 'Placeholder',
+  value,
+  defaultValue = '',
+  placeholder = 'Find things to do...',
+  onChange,
   className = '',
 }) {
-  const classes = ['search-input', stateClassMap[state], className].filter(Boolean).join(' ')
+  const [internalValue, setInternalValue] = useState(defaultValue)
+  const isControlled = value !== undefined
+  const currentValue = isControlled ? value : internalValue
+  const isEmpty = currentValue === ''
+
+  const classes = [
+    'search-input',
+    isEmpty ? 'search-input--placeholder' : 'search-input--active',
+    className,
+  ].filter(Boolean).join(' ')
+
+  function handleChange(e) {
+    if (!isControlled) {
+      setInternalValue(e.target.value)
+    }
+    onChange?.(e)
+  }
 
   return (
     <div className={classes}>
       <BrandIcon glyph="search" className="search-input__icon" />
-      <p className="search-input__text">{text}</p>
+      <input
+        className="search-input__text"
+        type="text"
+        value={currentValue}
+        placeholder={placeholder}
+        onChange={handleChange}
+      />
     </div>
   )
 }
-
-SearchInput.states = Object.keys(stateClassMap)

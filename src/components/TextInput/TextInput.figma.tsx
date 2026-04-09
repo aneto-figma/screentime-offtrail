@@ -5,21 +5,18 @@ figma.connect(
   "https://www.figma.com/design/9dQKfyAgC2IP6CDIKPdeFk/Offtrail?node-id=397-10222",
   {
     props: {
-      state: figma.enum("State", {
-        Default: "Default",
-        Empty: "Empty",
-      }),
       label: figma.string("Label"),
-      value: figma.string("Value"),
+      defaultValue: figma.string("Value"),
+      placeholder: figma.string("Value"),
       showLabel: figma.boolean("Show Label"),
       description: figma.string("Description"),
       showDescription: figma.boolean("Show Description"),
     },
-    example: ({ state, label, value, showLabel, description, showDescription }) => (
+    example: ({ label, defaultValue, placeholder, showLabel, description, showDescription }) => (
       <TextInput
-        state={state}
         label={label}
-        value={value}
+        defaultValue={defaultValue}
+        placeholder={placeholder}
         showLabel={showLabel}
         description={description}
         showDescription={showDescription}

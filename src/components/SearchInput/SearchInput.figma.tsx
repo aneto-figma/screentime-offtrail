@@ -5,14 +5,11 @@ figma.connect(
   "https://www.figma.com/design/9dQKfyAgC2IP6CDIKPdeFk/Offtrail?node-id=799-4917",
   {
     props: {
-      state: figma.enum("State", {
-        Placeholder: "Placeholder",
-        Active: "Active",
-      }),
-      text: figma.string("Text"),
+      defaultValue: figma.string("Text"),
+      placeholder: figma.string("Text"),
     },
-    example: ({ state, text }) => (
-      <SearchInput state={state} text={text} />
+    example: ({ defaultValue, placeholder }) => (
+      <SearchInput defaultValue={defaultValue} placeholder={placeholder} />
     ),
     imports: ["import SearchInput from '@/components/SearchInput/SearchInput'"],
   }
