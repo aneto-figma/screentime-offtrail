@@ -39,6 +39,8 @@
   --otds-size-padding-small: 12px;
   --otds-size-padding-medium: 16px;
   --otds-size-padding-large: 24px;
+  --otds-size-padding-xlarge: 32px;
+  --otds-size-padding-xxlarge: 56px;
 
   /* --- OTDS Design System: Spacing — Gap --- */
   --otds-size-gap-xsmall: 4px;
@@ -47,6 +49,10 @@
   --otds-size-gap-large: 24px;
   --otds-size-gap-xlarge: 40px;
   --otds-size-gap-xxlarge: 56px;
+
+  /* --- OTDS Design System: Corner Radius --- */
+  /* --- OTDS Design System: Letter Spacing --- */
+  --otds-size-letter-spacing-snug: -2px;
 
   /* --- OTDS Design System: Corner Radius --- */
   --otds-size-corner-small: 4px;
