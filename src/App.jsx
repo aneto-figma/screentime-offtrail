@@ -1,31 +1,33 @@
-import Wordmark from './components/Wordmark/Wordmark'
-import indexCss from './index.css?raw'
+import Logo from './components/Logo/Logo'
+import Button from './components/Button/Button'
+import heroImage from './assets/images/landing-hero.png'
 import './App.css'
-
-const allComponentFiles = import.meta.glob('./components/*/*.jsx', { eager: false })
-const componentCount = Object.keys(allComponentFiles).filter(p => !p.includes('.stories.')).length
-const tokenCount = new Set(indexCss.match(/--otds-[^:;\s,)]+/g)).size
 
 function App() {
   return (
-    <div style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: 'var(--otds-size-gap-medium)',
-        minHeight: '100vh',
-      }}>
-        <Wordmark />
-        <p style={{
-          fontFamily: 'var(--otds-font-family-sans)',
-          fontSize: 'var(--otds-size-font-medium)',
-          color: 'var(--otds-color-secondary)',
-          margin: 0,
-        }}>
-          {tokenCount} tokens &middot; {componentCount} components
-        </p>
+    <div className="landing">
+      <div className="landing__content">
+        <div className="landing__hero">
+          <img
+            className="landing__hero-image"
+            src={heroImage}
+            alt="Hikers walking along a mountain trail"
+          />
+          <div className="landing__scrim" />
+          <Logo className="landing__logo" />
+          <div className="landing__text">
+            <p className="landing__text-primary">Welcome to Offtrail.</p>
+            <p className="landing__text-secondary">
+              A community built for those who take the scenic route.
+            </p>
+          </div>
+          <div className="landing__buttons">
+            <Button label="Sign Up" colour="brand" size="large" />
+            <Button label="SIGN IN" colour="transparent-white" size="large" />
+          </div>
+        </div>
       </div>
+    </div>
   )
 }
 
