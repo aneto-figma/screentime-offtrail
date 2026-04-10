@@ -14,43 +14,29 @@
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Map background */
+/* Map background — MapView fills the tile */
 
 .tile-location__map {
   position: absolute;
   inset: 0;
-  overflow: hidden;
 }
 
-.tile-location__map-bg {
-  position: absolute;
-  left: -345px;
-  top: -162px;
-  width: 1088px;
-  height: 731px;
-  object-fit: cover;
-  pointer-events: none;
+.tile-location__map .map-view__shade {
+  display: none;
 }
 
-.tile-location__map-overlay {
+/* Radial overlay for text readability */
+
+.tile-location__overlay {
   position: absolute;
   inset: 0;
   background: radial-gradient(ellipse at center, rgba(187,228,255,0.9) 0%, rgba(187,228,255,0.3) 100%);
 }
 
 @media (prefers-color-scheme: dark) {
-  .tile-location__map-overlay {
+  .tile-location__overlay {
     background: radial-gradient(ellipse at center, rgba(16,7,27,0.3) 0%, rgba(16,7,27,0.6) 100%);
   }
-}
-
-/* Map pin */
-
-.tile-location__pin {
-  position: absolute;
-  left: calc(480px + 179px);
-  top: calc(96px + 162px);
-  filter: drop-shadow(0px 4px 3px rgba(0,0,0,0.17));
 }
 
 /* Radar rings */
