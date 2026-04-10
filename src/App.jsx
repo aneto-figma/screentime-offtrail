@@ -1,9 +1,12 @@
+import { useNavigate } from 'react-router-dom'
 import Logo from './components/Logo/Logo'
 import Button from './components/Button/Button'
 import heroImage from './assets/images/landing-hero.png'
 import './App.css'
 
 function App() {
+  const navigate = useNavigate()
+
   return (
     <div className="landing">
       <div className="landing__content">
@@ -23,7 +26,12 @@ function App() {
           </div>
           <div className="landing__buttons">
             <Button label="Sign Up" colour="brand" size="large" />
-            <Button label="SIGN IN" colour="transparent-white" size="large" />
+            <Button
+              label="SIGN IN"
+              colour="transparent-white"
+              size="large"
+              onClick={() => navigate('/home')}
+            />
           </div>
         </div>
       </div>

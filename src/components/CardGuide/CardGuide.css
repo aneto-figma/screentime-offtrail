@@ -5,7 +5,8 @@
   justify-content: flex-end;
   align-items: flex-start;
   width: 162px;
-  height: 221px;
+  aspect-ratio: 162 / 221;
+  flex-shrink: 0;
   padding: var(--otds-size-padding-small);
   border-radius: var(--otds-size-corner-medium);
   overflow: hidden;

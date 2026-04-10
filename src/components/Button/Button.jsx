@@ -13,6 +13,7 @@ export default function Button({
   size = 'large',
   icon = false,
   className = '',
+  onClick,
 }) {
   const classes = [
     'button',
@@ -22,7 +23,7 @@ export default function Button({
   ].filter(Boolean).join(' ')
 
   return (
-    <button className={classes}>
+    <button className={classes} onClick={onClick}>
       {label}
       {icon && <Icon glyph="out" className="button__icon" />}
     </button>
