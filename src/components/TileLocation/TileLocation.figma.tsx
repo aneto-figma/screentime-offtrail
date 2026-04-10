@@ -8,7 +8,11 @@ figma.connect(
       location: figma.string("Location"),
     },
     example: ({ location }) => (
-      <TileLocation location={location} />
+      <TileLocation
+        location={location}
+        latitude={34.27}
+        longitude={-119.23}
+      />
     ),
     imports: ["import TileLocation from '@/components/TileLocation/TileLocation'"],
   }

@@ -1,13 +1,12 @@
-import mapBg from '../../assets/images/map/map-bg.png'
 import radarDarkOuter from '../../assets/images/map/radar-dark-outer.png'
 import radarDarkRing from '../../assets/images/map/radar-dark-ring.png'
-import radarDarkInner from '../../assets/images/map/radar-dark-inner.png'
+import radarDarkInner from '../../assets/images/map/radar-dark-inner.svg'
 import radarDarkMid from '../../assets/images/map/radar-dark-mid.png'
 import radarLightOuter from '../../assets/images/map/radar-light-outer.png'
-import radarLightRing from '../../assets/images/map/radar-light-ring.png'
+import radarLightRing from '../../assets/images/map/radar-light-ring.svg'
 import radarLightInner from '../../assets/images/map/radar-light-inner.png'
 import radarLightMid from '../../assets/images/map/radar-light-mid.png'
-import MapPin from '../MapPin/MapPin'
+import MapView from '../MapView/MapView'
 import useSystemMode from '../../hooks/useSystemMode'
 import './TileLocation.css'
 
@@ -26,21 +25,36 @@ function ChevronRight() {
 
 export default function TileLocation({
   location = 'Location',
+  latitude = 34.07,
+  longitude = -118.25,
   className = '',
 }) {
   const mode = useSystemMode()
   const radar = radarImages[mode]
   const classes = ['tile-location', className].filter(Boolean).join(' ')
 
+  const markers = [{ id: 'location', lat: latitude, lng: longitude }]
+
+  // Offset map center so pin appears in the bottom-right area of the tile
+  const mapCenterLat = latitude + 0.003
+  const mapCenterLng = longitude - 0.008
+
   return (
     <div className={classes}>
 
       {/* Map background */}
-      <div className="tile-location__map">
-        <img className="tile-location__map-bg" src={mapBg} alt="" />
-        <div className="tile-location__map-overlay" />
-        <MapPin className="tile-location__pin" />
-      </div>
+      <MapView
+        className="tile-location__map"
+        variant="full"
+        latitude={mapCenterLat}
+        longitude={mapCenterLng}
+        zoom={14}
+        interactive={false}
+        showUserLocation={false}
+        labels={false}
+        markers={markers}
+      />
+      <div className="tile-location__overlay" />
 
       {/* Radar rings */}
       <div className="tile-location__radar">

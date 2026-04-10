@@ -18,6 +18,7 @@ export default function MapView({
   zoom = 12,
   interactive = true,
   variant = 'full',
+  labels = true,
   markers = [],
   showUserLocation = true,
   onMarkerClick,
@@ -44,8 +45,12 @@ export default function MapView({
     const map = mapRef.current?.getMap()
     if (!map || !style.config) return
 
+    const config = labels
+      ? style.config
+      : { ...style.config, showPlaceLabels: false, showPointOfInterestLabels: false, showTransitLabels: false }
+
     const apply = () => {
-      for (const [key, value] of Object.entries(style.config)) {
+      for (const [key, value] of Object.entries(config)) {
         map.setConfigProperty('basemap', key, value)
       }
     }
@@ -55,7 +60,7 @@ export default function MapView({
     } else {
       map.once('style.load', apply)
     }
-  }, [style.config])
+  }, [style.config, labels])
 
   const classes = [
     'map-view',
