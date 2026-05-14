@@ -1,6 +1,7 @@
 .event-nav {
   position: relative;
   width: 100%;
+  box-sizing: border-box;
   background: var(--otds-bg-brand-secondary, #424857);
   border-top: 1px solid var(--otds-color-dim, rgba(255, 255, 255, 0.1));
   display: flex;

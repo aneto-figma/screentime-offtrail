@@ -6,6 +6,7 @@ import App from './App.jsx'
 import Home from './Home.jsx'
 import Map from './Map.jsx'
 import Profile from './Profile.jsx'
+import EventDetail from './EventDetail.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/home" element={<Home />} />
         <Route path="/map" element={<Map />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/event/:eventId" element={<EventDetail />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

@@ -12,16 +12,32 @@ export default function CardEvent({
   day = '12',
   size = 'large',
   overlay = '',
+  onClick,
   className = '',
 }) {
   const classes = [
     'card-event',
     `card-event--${size}`,
+    onClick && 'card-event--clickable',
     className,
   ].filter(Boolean).join(' ')
 
+  const interactiveProps = onClick
+    ? {
+        role: 'button',
+        tabIndex: 0,
+        onClick,
+        onKeyDown: (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            onClick(e)
+          }
+        },
+      }
+    : {}
+
   return (
-    <div className={classes}>
+    <div className={classes} {...interactiveProps}>
       <div className="card-event__image-wrap">
         <img className="card-event__image" src={src} alt={title} />
         {size === 'large' && overlay && (

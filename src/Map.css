@@ -25,7 +25,7 @@
 
 .map-screen__search {
   position: absolute;
-  top: var(--otds-size-padding-xlarge);
+  top: var(--otds-size-padding-medium);
   left: 0;
   right: 0;
   display: flex;
