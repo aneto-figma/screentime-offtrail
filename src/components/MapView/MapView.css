@@ -29,25 +29,8 @@
   z-index: 2;
 }
 
-/* Fallback when no token */
-.map-view__fallback {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  background: var(--otds-bg-map);
-}
-
-.map-view__fallback-text {
-  font-family: var(--otds-font-family-mono, monospace);
-  font-size: var(--otds-size-font-small, 14px);
-  color: var(--otds-white-400, rgba(255, 255, 255, 0.4));
-  margin: 0;
-}
-
-/* Hide default Mapbox controls */
-.map-view .mapboxgl-ctrl-group,
-.map-view .mapboxgl-ctrl-attrib {
+/* Hide default MapLibre controls */
+.map-view .maplibregl-ctrl-group,
+.map-view .maplibregl-ctrl-attrib {
   display: none;
 }

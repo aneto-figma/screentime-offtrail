@@ -7,6 +7,7 @@ import radarLightRing from '../../assets/images/map/radar-light-ring.svg'
 import radarLightInner from '../../assets/images/map/radar-light-inner.png'
 import radarLightMid from '../../assets/images/map/radar-light-mid.png'
 import MapView from '../MapView/MapView'
+import MapPin from '../MapPin/MapPin'
 import useSystemMode from '../../hooks/useSystemMode'
 import './TileLocation.css'
 
@@ -33,26 +34,20 @@ export default function TileLocation({
   const radar = radarImages[mode]
   const classes = ['tile-location', className].filter(Boolean).join(' ')
 
-  const markers = [{ id: 'location', lat: latitude, lng: longitude }]
-
-  // Offset map center so pin appears in the bottom-right area of the tile
-  const mapCenterLat = latitude + 0.003
-  const mapCenterLng = longitude - 0.008
-
   return (
     <div className={classes}>
 
-      {/* Map background */}
+      {/* Map background — centered on the marker; CSS anchors its center
+          to (right: 64px, bottom: 54px) of the tile */}
       <MapView
         className="tile-location__map"
         variant="full"
-        latitude={mapCenterLat}
-        longitude={mapCenterLng}
+        latitude={latitude}
+        longitude={longitude}
         zoom={14}
         interactive={false}
         showUserLocation={false}
         labels={false}
-        markers={markers}
       />
       <div className="tile-location__overlay" />
 
@@ -62,6 +57,12 @@ export default function TileLocation({
         <img className="tile-location__radar-ring"  src={radar.ring}  alt="" />
         <img className="tile-location__radar-mid"   src={radar.mid}   alt="" />
         <img className="tile-location__radar-inner" src={radar.inner} alt="" />
+      </div>
+
+      {/* Marker pin — anchored to the same point as the radar centers,
+          layered above the radar so the radar-mid ring doesn't cover it */}
+      <div className="tile-location__pin">
+        <MapPin />
       </div>
 
       {/* Text content */}
