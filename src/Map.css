@@ -1,0 +1,69 @@
+.map-screen {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100svh;
+  background-color: var(--otds-bg-brand-primary);
+}
+
+/* --- Map region: fills available space above the bottom sheet --- */
+
+.map-screen__map-region {
+  position: relative;
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.map-screen__map {
+  position: absolute;
+  inset: 0;
+}
+
+/* --- Search input pinned near the top of the map region --- */
+
+.map-screen__search {
+  position: absolute;
+  top: var(--otds-size-padding-xlarge);
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* --- Filter chips along the bottom of the map region --- */
+
+.map-screen__tabs {
+  position: absolute;
+  bottom: var(--otds-size-padding-xsmall);
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: var(--otds-size-gap-small);
+  padding: 0 var(--otds-size-padding-small);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  z-index: 1;
+}
+
+.map-screen__tabs::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Bottom sheet content --- */
+
+.map-screen__sheet {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.map-screen__events {
+  display: flex;
+  flex-direction: column;
+  gap: var(--otds-size-gap-medium);
+  padding: 0 var(--otds-size-padding-medium);
+  box-sizing: border-box;
+}
