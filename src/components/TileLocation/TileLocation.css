@@ -14,11 +14,17 @@
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Map background — MapView fills the tile */
+/* Map background — fixed size positioned so its center (and thus the marker,
+   which sits at the map's center coordinate) lands at (right: 64px, bottom: 54px)
+   of the tile. The element overflows the tile bounds; the tile clips it. */
 
 .tile-location__map {
   position: absolute;
-  inset: 0;
+  right: 64px;
+  bottom: 54px;
+  width: 200%;
+  height: 200%;
+  transform: translate(50%, 50%);
 }
 
 .tile-location__map .map-view__shade {
@@ -43,18 +49,12 @@
 
 .tile-location__radar {
   position: absolute;
-  left: 138px;
-  top: -53px;
+  right: 64px;
+  bottom: 54px;
   width: 378px;
   height: 378px;
+  transform: translate(50%, 50%);
   pointer-events: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  .tile-location__radar {
-    left: 134px;
-    top: -58px;
-  }
 }
 
 .tile-location__radar-outer {
@@ -89,6 +89,20 @@
   width: 136px;
   height: 136px;
   opacity: 0.2;
+}
+
+/* Pin marker — bottom-center anchored to (right: 64px, bottom: 54px),
+   layered above the radar so the opaque radar-mid ring doesn't hide it.
+   MapPin is 20px wide; translate(50%, 0) shifts the element +10px right
+   so its horizontal center sits at the anchor. */
+
+.tile-location__pin {
+  position: absolute;
+  right: 64px;
+  bottom: 54px;
+  transform: translate(50%, 0);
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* Text content */
