@@ -1,51 +1,21 @@
+import { useNavigate } from 'react-router-dom'
 import MapView from './components/MapView/MapView'
 import SearchInput from './components/SearchInput/SearchInput'
 import Chip from './components/Chip/Chip'
 import BottomSheet from './components/BottomSheet/BottomSheet'
 import CardEvent from './components/CardEvent/CardEvent'
 import Nav from './components/Nav/Nav'
+import { getEvent } from './data/events'
 import './Map.css'
-
-import imgSurf from './assets/images/event/Event-02.png'
-import imgMorningRun from './assets/images/event/Event-54.png'
-import imgHorseback from './assets/images/event/Event-55.png'
 
 const FILTERS = ['For You', 'Yoga', 'Surfing', 'Biking', 'Meditation']
 
-const EVENTS = [
-  {
-    id: 1,
-    src: imgSurf,
-    title: 'Weekend Surf Session',
-    location: 'VENTURA, CA',
-    people: '12',
-    time: '6:30AM – 1:00PM',
-    month: 'JUN',
-    day: '12',
-  },
-  {
-    id: 2,
-    src: imgMorningRun,
-    title: 'Morning Run Meetup',
-    location: 'ALISO SUMMIT TRAIL, CA',
-    people: '64',
-    time: '3:00PM – 4:30PM',
-    month: 'JUN',
-    day: '14',
-  },
-  {
-    id: 3,
-    src: imgHorseback,
-    title: 'Horseback in Topanga',
-    location: 'TOPANGA, CA',
-    people: '35',
-    time: '5:45PM – 7:45PM',
-    month: 'JUN',
-    day: '20',
-  },
-]
+const EVENT_IDS = ['weekend-surf', 'morning-run', 'horseback']
 
 export default function Map() {
+  const navigate = useNavigate()
+  const events = EVENT_IDS.map(getEvent)
+
   return (
     <div className="map-screen">
       <div className="map-screen__map-region">
@@ -76,7 +46,7 @@ export default function Map() {
 
       <BottomSheet size="Default" className="map-screen__sheet">
         <div className="map-screen__events">
-          {EVENTS.map((event) => (
+          {events.map((event) => (
             <CardEvent
               key={event.id}
               size="small"
@@ -87,6 +57,7 @@ export default function Map() {
               time={event.time}
               month={event.month}
               day={event.day}
+              onClick={() => navigate(`/event/${event.id}`)}
             />
           ))}
         </div>

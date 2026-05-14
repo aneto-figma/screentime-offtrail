@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'
 import Logo from './components/Logo/Logo'
 import BrandIcon from './components/BrandIcon/BrandIcon'
 import TileWeather from './components/TileWeather/TileWeather'
@@ -6,17 +7,22 @@ import CardGuide from './components/CardGuide/CardGuide'
 import Carousel from './components/Carousel/Carousel'
 import TileLocation from './components/TileLocation/TileLocation'
 import Nav from './components/Nav/Nav'
+import { getEvent } from './data/events'
 import './Home.css'
 
-import imgFeatured from './assets/images/event/Event-01.png'
-import imgMorningRun from './assets/images/event/Event-54.png'
-import imgHorseback from './assets/images/event/Event-55.png'
-import imgSurf from './assets/images/event/Event-02.png'
 import imgAmelia from './assets/images/portraits/Portrait-05.png'
 import imgTeresa from './assets/images/portraits/Portrait-12.png'
 import imgKarim from './assets/images/portraits/Portrait-13.png'
 
+const featured = getEvent('canyon-crew')
+const morningRun = getEvent('morning-run')
+const horseback = getEvent('horseback')
+const weekendSurf = getEvent('weekend-surf')
+
 export default function Home() {
+  const navigate = useNavigate()
+  const openEvent = (id) => navigate(`/event/${id}`)
+
   return (
     <div className="home">
       <div className="home__content">
@@ -44,15 +50,16 @@ export default function Home() {
         <div className="home__section home__section--featured">
           <p className="home__section-title">Featured</p>
           <CardEvent
-            src={imgFeatured}
-            title="Canyon Crew Meetup"
-            location="Topanga, CA"
-            people="35"
-            time="5:45PM – 7:45PM"
+            src={featured.src}
+            title={featured.title}
+            location={featured.location}
+            people={featured.people}
+            time={featured.time}
             size="large"
-            overlay="Canyon crew meetup"
-            month="Jun"
-            day="12"
+            overlay={featured.overlay}
+            month={featured.month}
+            day={featured.day}
+            onClick={() => openEvent(featured.id)}
           />
         </div>
 
@@ -71,35 +78,38 @@ export default function Home() {
           <p className="home__section-title">Upcoming Events</p>
           <div className="home__events">
             <CardEvent
-              src={imgMorningRun}
-              title="Morning Run Meetup"
-              location="Aliso Summit Trail, CA"
-              people="64"
-              time="3:00PM – 4:30PM"
+              src={morningRun.src}
+              title={morningRun.title}
+              location={morningRun.location}
+              people={morningRun.people}
+              time={morningRun.time}
               size="large"
-              month="JUN"
-              day="14"
+              month={morningRun.month}
+              day={morningRun.day}
+              onClick={() => openEvent(morningRun.id)}
             />
             <CardEvent
-              src={imgHorseback}
-              title="Horseback in Topanga"
-              location="Topanga, CA"
-              people="35"
-              time="5:45PM – 7:45PM"
+              src={horseback.src}
+              title={horseback.title}
+              location={horseback.location}
+              people={horseback.people}
+              time={horseback.time}
               size="large"
-              month="Jun"
-              day="20"
+              month={horseback.month}
+              day={horseback.day}
+              onClick={() => openEvent(horseback.id)}
             />
             <CardEvent
-              src={imgSurf}
-              title="Weekend Surf Session"
-              location="Ventura, CA"
-              people="12"
-              time="6:30AM – 1:00PM"
+              src={weekendSurf.src}
+              title={weekendSurf.title}
+              location={weekendSurf.location}
+              people={weekendSurf.people}
+              time={weekendSurf.time}
               size="large"
               overlay="Group Surf"
-              month="Jun"
-              day="12"
+              month={weekendSurf.month}
+              day={weekendSurf.day}
+              onClick={() => openEvent(weekendSurf.id)}
             />
           </div>
         </div>

@@ -1,15 +1,21 @@
+import { useNavigate } from 'react-router-dom'
 import Avatar from './components/Avatar/Avatar'
 import Button from './components/Button/Button'
 import TileCallout from './components/TileCallout/TileCallout'
 import CardEvent from './components/CardEvent/CardEvent'
 import Nav from './components/Nav/Nav'
+import { getEvent } from './data/events'
 import './Profile.css'
 
 import imgAvatar from './assets/images/portraits/Portrait-05.png'
-import imgUpcoming from './assets/images/event/Event-54.png'
-import imgPast from './assets/images/event/Event-55.png'
+
+const upcoming = getEvent('morning-run')
+const past = getEvent('horseback')
 
 export default function Profile() {
+  const navigate = useNavigate()
+  const openEvent = (id) => navigate(`/event/${id}`)
+
   return (
     <div className="profile">
       <div className="profile__content">
@@ -39,14 +45,15 @@ export default function Profile() {
         <section className="profile__section">
           <p className="profile__section-title">Upcoming events</p>
           <CardEvent
-            src={imgUpcoming}
-            title="Morning Run Meetup"
-            location="Aliso Summit Trail, CA"
-            people="64"
-            time="3:00PM – 4:30PM"
+            src={upcoming.src}
+            title={upcoming.title}
+            location={upcoming.location}
+            people={upcoming.people}
+            time={upcoming.time}
             size="large"
-            month="JUN"
-            day="14"
+            month={upcoming.month}
+            day={upcoming.day}
+            onClick={() => openEvent(upcoming.id)}
           />
         </section>
 
@@ -54,14 +61,15 @@ export default function Profile() {
         <section className="profile__section">
           <p className="profile__section-title">Past events</p>
           <CardEvent
-            src={imgPast}
-            title="Horseback in Topanga"
-            location="Topanga, CA"
-            people="35"
-            time="5:45PM – 7:45PM"
+            src={past.src}
+            title={past.title}
+            location={past.location}
+            people={past.people}
+            time={past.time}
             size="large"
-            month="JUN"
-            day="20"
+            month={past.month}
+            day={past.day}
+            onClick={() => openEvent(past.id)}
           />
         </section>
       </div>

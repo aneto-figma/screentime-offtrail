@@ -148,3 +148,14 @@
   background: var(--otds-color-secondary);
   flex-shrink: 0;
 }
+
+/* Interactive affordance when onClick is provided */
+.card-event--clickable {
+  cursor: pointer;
+}
+
+.card-event--clickable:focus-visible {
+  outline: 2px solid var(--otds-color-brand-primary);
+  outline-offset: 4px;
+  border-radius: var(--otds-size-corner-medium);
+}
