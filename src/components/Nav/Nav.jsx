@@ -1,18 +1,25 @@
-import { useState } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import NavTab from '../NavTab/NavTab'
 import './Nav.css'
 
-export default function Nav({
-  active = 'Home',
-  className = ''
-}) {
-  const [activeTab, setActiveTab] = useState(active)
+const navItems = [
+  { key: 'Home', icon: 'home', path: '/home' },
+  { key: 'Map', icon: 'location', path: '/map' },
+  { key: 'Profile', icon: 'user', path: '/profile' },
+]
 
-  const navItems = [
-    { key: 'Home', icon: 'home' },
-    { key: 'Map', icon: 'location' },
-    { key: 'Profile', icon: 'user' }
-  ]
+export default function Nav({
+  active,
+  className = '',
+}) {
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  // Derive active tab from the URL when not explicitly provided
+  const activeKey =
+    active ??
+    navItems.find((item) => item.path === location.pathname)?.key ??
+    'Home'
 
   return (
     <div className={`nav ${className}`}>
@@ -21,8 +28,8 @@ export default function Nav({
           <NavTab
             key={item.key}
             icon={item.icon}
-            active={activeTab === item.key}
-            onClick={() => setActiveTab(item.key)}
+            active={activeKey === item.key}
+            onClick={() => navigate(item.path)}
           />
         ))}
       </div>
