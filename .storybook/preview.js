@@ -1,7 +1,16 @@
+import { createElement } from 'react';
+import { MemoryRouter } from 'react-router-dom';
 import '../src/index.css';
 
 /** @type { import('@storybook/react-vite').Preview } */
 const preview = {
+  decorators: [
+    // Provide a Router context so components using useNavigate / useLocation /
+    // useParams render in Storybook without crashing. createElement is used
+    // (instead of JSX) so this .js file doesn't need JSX transformation.
+    (Story) =>
+      createElement(MemoryRouter, { initialEntries: ['/'] }, createElement(Story)),
+  ],
   parameters: {
     options: {
       storySort: {
