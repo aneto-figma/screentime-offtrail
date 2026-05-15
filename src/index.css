@@ -188,6 +188,7 @@ body {
 
 #root {
   min-height: 100svh;
+  overflow-x: clip;
 }
 
 h1,

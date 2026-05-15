@@ -1,7 +1,7 @@
 .nav {
   position: relative;
   width: 100%;
-  height: 52px;
+  height: 64px;
   background: var(--otds-bg-brand-primary, #10071b);
   border-top: 1px solid var(--otds-color-dim, rgba(255, 255, 255, 0.1));
 }
