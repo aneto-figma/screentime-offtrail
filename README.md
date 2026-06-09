@@ -1,16 +1,78 @@
-# React + Vite
+# Screentime Offtrail
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React and Vite prototype for the Screentime Offtrail experience.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Node.js
+- npm
 
-## React Compiler
+This repo uses `package-lock.json`, so use npm for dependency installs.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Install Dependencies
 
-## Expanding the ESLint configuration
+```sh
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+For a clean install that exactly matches `package-lock.json`, use:
+
+```sh
+npm ci
+```
+
+## Run The App
+
+Start the Vite development server:
+
+```sh
+npm run dev
+```
+
+Vite will print the local URL in the terminal. By default, it is usually:
+
+```txt
+http://localhost:5173/
+```
+
+## Run Storybook
+
+Start the Storybook development server:
+
+```sh
+npm run storybook
+```
+
+Storybook runs on:
+
+```txt
+http://localhost:6006/
+```
+
+Stories are loaded from `src/**/*.mdx` and `src/**/*.stories.@(js|jsx|mjs|ts|tsx)`.
+
+## Useful Commands
+
+```sh
+npm run build
+```
+
+Builds the Vite app into `dist/`.
+
+```sh
+npm run preview
+```
+
+Serves the production build locally after `npm run build`.
+
+```sh
+npm run build-storybook
+```
+
+Builds the static Storybook site into `storybook-static/`.
+
+```sh
+npm run lint
+```
+
+Runs ESLint across the repo.
