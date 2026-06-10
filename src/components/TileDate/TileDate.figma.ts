@@ -1,0 +1,16 @@
+// url=https://www.figma.com/design/9dQKfyAgC2IP6CDIKPdeFk/Offtrail?node-id=424-1717
+
+import figma from "figma"
+
+const month = figma.selectedInstance.getString("Month")
+const day = figma.selectedInstance.getString("Day")
+
+export default {
+  id: "TileDate",
+  imports: ["import TileDate from '@/components/TileDate/TileDate'"],
+  example: figma.code`<TileDate${figma.helpers.react.renderProp(
+    "month",
+    month,
+  )}${figma.helpers.react.renderProp("day", day)}/>`,
+  metadata: { nestable: true },
+}
