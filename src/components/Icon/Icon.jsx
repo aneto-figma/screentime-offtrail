@@ -49,6 +49,13 @@ const glyphs = {
       </>
     ),
   },
+  'arrow-up-right': {
+    path: (
+      <>
+        <path d="M4.5 11.5L11.5 4.5M7 4.5h4.5V9" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      </>
+    ),
+  },
   question: {
     path: (
       <>
