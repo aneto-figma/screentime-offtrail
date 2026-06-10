@@ -5,5 +5,5 @@ import figma from "figma"
 export default {
   id: "MapView_1",
   imports: ["import MapView from '@/components/MapView/MapView'"],
-  example: figma.code`<MapView variant="card" interactive={false} latitude={34.07} longitude={-118.25} zoom={14}/>`,
+  example: figma.code`<MapView variant="card" mode="Dark" interactive={false} latitude={34.07} longitude={-118.25} zoom={14}/>`,
 }

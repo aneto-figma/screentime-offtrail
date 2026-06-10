@@ -7,6 +7,7 @@ export default {
     location: { control: 'text' },
     latitude: { control: 'number' },
     longitude: { control: 'number' },
+    mode: { control: 'select', options: ['Light', 'Dark'] },
   },
 }
 
@@ -15,5 +16,6 @@ export const Default = {
     location: 'Ventura, CA',
     latitude: 34.27,
     longitude: -119.23,
+    mode: 'Dark',
   },
 }

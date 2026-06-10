@@ -3,6 +3,10 @@
 import figma from "figma"
 
 const location = figma.selectedInstance.getString("Location")
+const mode = figma.selectedInstance.getEnum("Mode", {
+  Light: "Light",
+  Dark: "Dark",
+})
 
 export default {
   id: "TileLocation",
@@ -12,12 +16,31 @@ export default {
   example: figma.code`<TileLocation${figma.helpers.react.renderProp(
     "location",
     location,
+  )}${figma.helpers.react.renderProp(
+    "mode",
+    mode,
   )} latitude={34.27} longitude={-119.23}/>`,
   codeProperties: {
     "location": {
       "type": "string",
       "label": "Location",
       "defaultValue": "Location"
+    },
+    "mode": {
+      "type": "string",
+      "label": "Mode",
+      "defaultValue": "Dark",
+      "control": "select",
+      "options": [
+        {
+          "value": "Light",
+          "label": "Light"
+        },
+        {
+          "value": "Dark",
+          "label": "Dark"
+        }
+      ]
     },
     "latitude": {
       "type": "number",

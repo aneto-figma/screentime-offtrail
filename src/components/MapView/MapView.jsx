@@ -5,7 +5,6 @@ import MapPin from '../MapPin/MapPin'
 import MapUserLocation from '../MapUserLocation/MapUserLocation'
 import { MAP_STYLES } from './mapStyles'
 import { recolorMap } from './recolorMap'
-import useSystemMode from '../../hooks/useSystemMode'
 import './MapView.css'
 
 const variantClassMap = {
@@ -19,6 +18,7 @@ export default function MapView({
   zoom = 12,
   interactive = true,
   variant = 'full',
+  mode = 'Dark',
   labels = true,
   markers = [],
   showUserLocation = true,
@@ -26,7 +26,6 @@ export default function MapView({
   className = '',
 }) {
   const mapRef = useRef(null)
-  const mode = useSystemMode()
 
   const [viewState, setViewState] = useState({
     longitude,
@@ -120,3 +119,4 @@ export default function MapView({
 }
 
 MapView.variants = Object.keys(variantClassMap)
+MapView.modes = Object.keys(MAP_STYLES)
