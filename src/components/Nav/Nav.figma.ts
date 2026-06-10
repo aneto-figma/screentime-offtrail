@@ -15,5 +15,30 @@ export default {
     "active",
     active,
   )}/>`,
+  codeProperties: {
+    "active": {
+      "type": "string",
+      "label": "Active",
+      "control": "select",
+      "options": [
+        {
+          "value": "",
+          "label": "Auto"
+        },
+        {
+          "value": "Home",
+          "label": "Home"
+        },
+        {
+          "value": "Map",
+          "label": "Map"
+        },
+        {
+          "value": "Profile",
+          "label": "Profile"
+        }
+      ]
+    }
+  },
   metadata: { nestable: true },
 }

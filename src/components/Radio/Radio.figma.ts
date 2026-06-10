@@ -23,5 +23,31 @@ export default {
     "description",
     description,
   )}${figma.helpers.react.renderProp("showDescription", showDescription)}/>`,
+  codeProperties: {
+    "label": {
+      "type": "string",
+      "label": "Label",
+      "defaultValue": "Label"
+    },
+    "description": {
+      "type": "string",
+      "label": "Description",
+      "defaultValue": "Description"
+    },
+    "active": {
+      "type": "boolean",
+      "label": "Active"
+    },
+    "defaultActive": {
+      "type": "boolean",
+      "label": "Default Active",
+      "defaultValue": false
+    },
+    "showDescription": {
+      "type": "boolean",
+      "label": "Show Description",
+      "defaultValue": true
+    }
+  },
   metadata: { nestable: true },
 }

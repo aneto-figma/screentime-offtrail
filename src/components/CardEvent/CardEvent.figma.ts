@@ -34,5 +34,62 @@ export default {
     "overlay",
     overlay,
   )} month="Jun" day="12"/>`,
+  codeProperties: {
+    "src": {
+      "type": "string",
+      "label": "Image Source"
+    },
+    "title": {
+      "type": "string",
+      "label": "Title",
+      "defaultValue": "Weekend Surf Session"
+    },
+    "location": {
+      "type": "string",
+      "label": "Location",
+      "defaultValue": "Ventura, CA"
+    },
+    "people": {
+      "type": "string",
+      "label": "People",
+      "defaultValue": "12"
+    },
+    "time": {
+      "type": "string",
+      "label": "Time",
+      "defaultValue": "6:30AM – 1:00PM"
+    },
+    "month": {
+      "type": "string",
+      "label": "Month",
+      "defaultValue": "Jun"
+    },
+    "day": {
+      "type": "string",
+      "label": "Day",
+      "defaultValue": "12"
+    },
+    "size": {
+      "type": "string",
+      "label": "Size",
+      "defaultValue": "large",
+      "control": "select",
+      "options": [
+        {
+          "value": "large",
+          "label": "Large"
+        },
+        {
+          "value": "small",
+          "label": "Small"
+        }
+      ]
+    },
+    "overlay": {
+      "type": "string",
+      "label": "Overlay",
+      "defaultValue": ""
+    }
+  },
   metadata: { nestable: true },
 }

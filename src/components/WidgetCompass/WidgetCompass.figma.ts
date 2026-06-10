@@ -8,4 +8,16 @@ export default {
     "import WidgetCompass from '@/components/WidgetCompass/WidgetCompass'",
   ],
   example: figma.code`<WidgetCompass live/>`,
+  codeProperties: {
+    "bearing": {
+      "type": "number",
+      "label": "Bearing",
+      "defaultValue": 355
+    },
+    "live": {
+      "type": "boolean",
+      "label": "Live",
+      "defaultValue": false
+    }
+  },
 }

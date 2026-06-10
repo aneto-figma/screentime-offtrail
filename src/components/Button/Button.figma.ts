@@ -27,5 +27,53 @@ export default {
     "size",
     size,
   )}${figma.helpers.react.renderProp("icon", icon)}/>`,
+  codeProperties: {
+    "label": {
+      "type": "string",
+      "label": "Label",
+      "defaultValue": "Button"
+    },
+    "colour": {
+      "type": "string",
+      "label": "Colour",
+      "defaultValue": "brand",
+      "control": "select",
+      "options": [
+        {
+          "value": "brand",
+          "label": "Brand"
+        },
+        {
+          "value": "transparent-white",
+          "label": "Transparent White"
+        },
+        {
+          "value": "transparent-black",
+          "label": "Transparent Black"
+        }
+      ]
+    },
+    "size": {
+      "type": "string",
+      "label": "Size",
+      "defaultValue": "large",
+      "control": "select",
+      "options": [
+        {
+          "value": "large",
+          "label": "Large"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        }
+      ]
+    },
+    "icon": {
+      "type": "boolean",
+      "label": "Icon",
+      "defaultValue": false
+    }
+  },
   metadata: { nestable: true },
 }

@@ -24,5 +24,32 @@ export default {
     "low",
     low,
   )}${figma.helpers.react.renderProp("high", high)}/>`,
+  codeProperties: {
+    "time": {
+      "type": "string",
+      "label": "Time",
+      "defaultValue": "3:43PM"
+    },
+    "conditions": {
+      "type": "string",
+      "label": "Conditions",
+      "defaultValue": "Light Rain"
+    },
+    "temp": {
+      "type": "string",
+      "label": "Temp",
+      "defaultValue": "65°F"
+    },
+    "low": {
+      "type": "string",
+      "label": "Low",
+      "defaultValue": "42°"
+    },
+    "high": {
+      "type": "string",
+      "label": "High",
+      "defaultValue": "67°"
+    }
+  },
   metadata: { nestable: true },
 }

@@ -30,5 +30,32 @@ export default {
         { value: 'one', label: 'Option One' },
         { value: 'two', label: 'Option Two' },
     ]}/>`,
+  codeProperties: {
+    "label": {
+      "type": "string",
+      "label": "Label",
+      "defaultValue": "Label"
+    },
+    "description": {
+      "type": "string",
+      "label": "Description",
+      "defaultValue": "Description"
+    },
+    "showLabel": {
+      "type": "boolean",
+      "label": "Show Label",
+      "defaultValue": true
+    },
+    "showDescription": {
+      "type": "boolean",
+      "label": "Show Description",
+      "defaultValue": true
+    },
+    "placeholder": {
+      "type": "string",
+      "label": "Placeholder",
+      "defaultValue": "Select an option"
+    }
+  },
   metadata: { nestable: true },
 }

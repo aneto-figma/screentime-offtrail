@@ -35,5 +35,107 @@ export default {
     "glyph",
     glyph,
   )}/>`,
+  codeProperties: {
+    "glyph": {
+      "type": "string",
+      "label": "Glyph",
+      "defaultValue": "home",
+      "control": "select",
+      "options": [
+        {
+          "value": "home",
+          "label": "Home"
+        },
+        {
+          "value": "search",
+          "label": "Search"
+        },
+        {
+          "value": "user",
+          "label": "User"
+        },
+        {
+          "value": "clouds",
+          "label": "Clouds"
+        },
+        {
+          "value": "rain",
+          "label": "Rain"
+        },
+        {
+          "value": "sun",
+          "label": "Sun"
+        },
+        {
+          "value": "lightning",
+          "label": "Lightning"
+        },
+        {
+          "value": "bolt",
+          "label": "Bolt"
+        },
+        {
+          "value": "wind",
+          "label": "Wind"
+        },
+        {
+          "value": "calendar",
+          "label": "Calendar"
+        },
+        {
+          "value": "compass",
+          "label": "Compass"
+        },
+        {
+          "value": "map",
+          "label": "Map"
+        },
+        {
+          "value": "location",
+          "label": "Location"
+        },
+        {
+          "value": "close",
+          "label": "Close"
+        },
+        {
+          "value": "settings",
+          "label": "Settings"
+        },
+        {
+          "value": "share",
+          "label": "Share"
+        },
+        {
+          "value": "save",
+          "label": "Save"
+        },
+        {
+          "value": "arrow-back",
+          "label": "Arrow Back"
+        },
+        {
+          "value": "caret",
+          "label": "Caret"
+        },
+        {
+          "value": "arrow-down",
+          "label": "Arrow Down"
+        },
+        {
+          "value": "arrow-up",
+          "label": "Arrow Up"
+        },
+        {
+          "value": "arrow-left",
+          "label": "Arrow Left"
+        },
+        {
+          "value": "arrow-right",
+          "label": "Arrow Right"
+        }
+      ]
+    }
+  },
   metadata: { nestable: true },
 }

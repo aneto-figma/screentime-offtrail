@@ -26,5 +26,53 @@ export default {
     "size",
     size,
   )}${figma.helpers.react.renderProp("disabled", disabled)}/>`,
+  codeProperties: {
+    "glyph": {
+      "type": "string",
+      "label": "Glyph",
+      "defaultValue": "caret"
+    },
+    "variant": {
+      "type": "string",
+      "label": "Variant",
+      "defaultValue": "primary",
+      "control": "select",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "outline",
+          "label": "Outline"
+        },
+        {
+          "value": "neutral",
+          "label": "Neutral"
+        }
+      ]
+    },
+    "size": {
+      "type": "string",
+      "label": "Size",
+      "defaultValue": "medium",
+      "control": "select",
+      "options": [
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "small",
+          "label": "Small"
+        }
+      ]
+    },
+    "disabled": {
+      "type": "boolean",
+      "label": "Disabled",
+      "defaultValue": false
+    }
+  },
   metadata: { nestable: true },
 }

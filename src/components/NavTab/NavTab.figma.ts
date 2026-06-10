@@ -14,5 +14,17 @@ export default {
     "active",
     active,
   )}/>`,
+  codeProperties: {
+    "icon": {
+      "type": "string",
+      "label": "Icon",
+      "defaultValue": "home"
+    },
+    "active": {
+      "type": "boolean",
+      "label": "Active",
+      "defaultValue": false
+    }
+  },
   metadata: { nestable: true },
 }

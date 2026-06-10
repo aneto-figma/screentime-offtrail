@@ -12,5 +12,21 @@ export default {
     "name",
     name,
   )}${figma.helpers.react.renderProp("category", category)}/>`,
+  codeProperties: {
+    "src": {
+      "type": "string",
+      "label": "Image Source"
+    },
+    "name": {
+      "type": "string",
+      "label": "Name",
+      "defaultValue": "Amelia B."
+    },
+    "category": {
+      "type": "string",
+      "label": "Category",
+      "defaultValue": "SURFING"
+    }
+  },
   metadata: { nestable: true },
 }

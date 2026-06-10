@@ -12,5 +12,17 @@ export default {
     "label",
     label,
   )}${figma.helpers.react.renderProp("active", active)}/>`,
+  codeProperties: {
+    "label": {
+      "type": "string",
+      "label": "Label",
+      "defaultValue": "Tag"
+    },
+    "active": {
+      "type": "boolean",
+      "label": "Active",
+      "defaultValue": false
+    }
+  },
   metadata: { nestable: true },
 }

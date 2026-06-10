@@ -16,5 +16,40 @@ export default {
     "size",
     size,
   )}/>`,
+  codeProperties: {
+    "src": {
+      "type": "string",
+      "label": "Source"
+    },
+    "alt": {
+      "type": "string",
+      "label": "Alt Text",
+      "defaultValue": ""
+    },
+    "size": {
+      "type": "number",
+      "label": "Size",
+      "defaultValue": 80,
+      "control": "select",
+      "options": [
+        {
+          "value": 80,
+          "label": "80"
+        },
+        {
+          "value": 56,
+          "label": "56"
+        },
+        {
+          "value": 40,
+          "label": "40"
+        },
+        {
+          "value": 32,
+          "label": "32"
+        }
+      ]
+    }
+  },
   metadata: { nestable: true },
 }

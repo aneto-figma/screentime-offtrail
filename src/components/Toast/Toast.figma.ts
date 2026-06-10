@@ -11,5 +11,12 @@ export default {
     "message",
     message,
   )}/>`,
+  codeProperties: {
+    "message": {
+      "type": "string",
+      "label": "Message",
+      "defaultValue": "Notification message"
+    }
+  },
   metadata: { nestable: true },
 }

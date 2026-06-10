@@ -8,4 +8,22 @@ export default {
     "import MapUserLocation from '@/components/MapUserLocation/MapUserLocation'",
   ],
   example: figma.code`<MapUserLocation size="large"/>`,
+  codeProperties: {
+    "size": {
+      "type": "string",
+      "label": "Size",
+      "defaultValue": "large",
+      "control": "select",
+      "options": [
+        {
+          "value": "large",
+          "label": "Large"
+        },
+        {
+          "value": "small",
+          "label": "Small"
+        }
+      ]
+    }
+  },
 }

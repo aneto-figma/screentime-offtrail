@@ -13,5 +13,22 @@ export default {
     "location",
     location,
   )} latitude={34.27} longitude={-119.23}/>`,
+  codeProperties: {
+    "location": {
+      "type": "string",
+      "label": "Location",
+      "defaultValue": "Location"
+    },
+    "latitude": {
+      "type": "number",
+      "label": "Latitude",
+      "defaultValue": 34.07
+    },
+    "longitude": {
+      "type": "number",
+      "label": "Longitude",
+      "defaultValue": -118.25
+    }
+  },
   metadata: { nestable: true },
 }

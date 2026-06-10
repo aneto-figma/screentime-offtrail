@@ -14,5 +14,17 @@ export default {
     "activity",
     activity,
   )}${figma.helpers.react.renderProp("count", count)}/>`,
+  codeProperties: {
+    "activity": {
+      "type": "string",
+      "label": "Activity",
+      "defaultValue": "Meditation"
+    },
+    "count": {
+      "type": "string",
+      "label": "Count",
+      "defaultValue": "64"
+    }
+  },
   metadata: { nestable: true },
 }

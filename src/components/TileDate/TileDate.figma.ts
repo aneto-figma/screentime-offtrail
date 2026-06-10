@@ -12,5 +12,17 @@ export default {
     "month",
     month,
   )}${figma.helpers.react.renderProp("day", day)}/>`,
+  codeProperties: {
+    "day": {
+      "type": "string",
+      "label": "Day",
+      "defaultValue": "28"
+    },
+    "month": {
+      "type": "string",
+      "label": "Month",
+      "defaultValue": "Jun"
+    }
+  },
   metadata: { nestable: true },
 }

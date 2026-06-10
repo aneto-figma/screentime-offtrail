@@ -12,5 +12,17 @@ export default {
     "message",
     message,
   )}${figma.helpers.react.renderProp("action", action)}/>`,
+  codeProperties: {
+    "message": {
+      "type": "string",
+      "label": "Message",
+      "defaultValue": "Something went wrong"
+    },
+    "action": {
+      "type": "string",
+      "label": "Action",
+      "defaultValue": "Refresh or try again"
+    }
+  },
   metadata: { nestable: true },
 }

@@ -12,5 +12,17 @@ export default {
     "defaultValue",
     defaultValue,
   )}${figma.helpers.react.renderProp("placeholder", placeholder)}/>`,
+  codeProperties: {
+    "placeholder": {
+      "type": "string",
+      "label": "Placeholder",
+      "defaultValue": "Find things to do..."
+    },
+    "defaultValue": {
+      "type": "string",
+      "label": "Default Value",
+      "defaultValue": ""
+    }
+  },
   metadata: { nestable: true },
 }

@@ -28,5 +28,37 @@ export default {
     "description",
     description,
   )}${figma.helpers.react.renderProp("hasDescription", hasDescription)}/>`,
+  codeProperties: {
+    "label": {
+      "type": "string",
+      "label": "Label",
+      "defaultValue": "Label"
+    },
+    "description": {
+      "type": "string",
+      "label": "Description",
+      "defaultValue": "Description"
+    },
+    "showLabel": {
+      "type": "boolean",
+      "label": "Show Label",
+      "defaultValue": true
+    },
+    "hasDescription": {
+      "type": "boolean",
+      "label": "Has Description",
+      "defaultValue": true
+    },
+    "placeholder": {
+      "type": "string",
+      "label": "Placeholder",
+      "defaultValue": "Value"
+    },
+    "defaultValue": {
+      "type": "string",
+      "label": "Default Value",
+      "defaultValue": ""
+    }
+  },
   metadata: { nestable: true },
 }

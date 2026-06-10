@@ -15,5 +15,23 @@ export default {
     "size",
     size,
   )}>${figma.helpers.react.renderChildren(children)}</BottomSheet>`,
+  codeProperties: {
+    "size": {
+      "type": "string",
+      "label": "Size",
+      "defaultValue": "Default",
+      "control": "select",
+      "options": [
+        {
+          "value": "Default",
+          "label": "Default"
+        },
+        {
+          "value": "Tall",
+          "label": "Tall"
+        }
+      ]
+    }
+  },
   metadata: { nestable: true },
 }

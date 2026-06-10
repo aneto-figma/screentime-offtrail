@@ -7,4 +7,16 @@ export default {
   id: "PageHeader",
   imports: ["import PageHeader from '@/{{relativePath}}';"],
   example: figma.code`<PageHeader title="Explore Trails" showShareButton={true}/>`,
+  codeProperties: {
+    "title": {
+      "type": "string",
+      "label": "Title",
+      "defaultValue": "Heading"
+    },
+    "showShareButton": {
+      "type": "boolean",
+      "label": "Show Share Button",
+      "defaultValue": true
+    }
+  },
 }
