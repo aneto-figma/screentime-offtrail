@@ -8,12 +8,18 @@ function needsPermission() {
   )
 }
 
+function supportsDeviceOrientation() {
+  return typeof window !== 'undefined' && Boolean(window.DeviceOrientationEvent)
+}
+
 export default function useCompassBearing() {
   const [bearing, setBearing] = useState(null)
   const [permission, setPermission] = useState(() =>
     needsPermission() ? 'prompt' : 'granted'
   )
-  const [supported, setSupported] = useState(null)
+  const [supported, setSupported] = useState(() =>
+    supportsDeviceOrientation() ? null : false
+  )
 
   const handleOrientation = useCallback((event) => {
     // iOS: webkitCompassHeading is a true compass bearing (0–360°, clockwise from north)
@@ -45,10 +51,7 @@ export default function useCompassBearing() {
 
   useEffect(() => {
     if (permission !== 'granted') return
-    if (typeof window === 'undefined' || !window.DeviceOrientationEvent) {
-      setSupported(false)
-      return
-    }
+    if (!supportsDeviceOrientation()) return
 
     // Prefer deviceorientationabsolute (Android) — gives heading relative to true north.
     // Fallback to deviceorientation which includes webkitCompassHeading on iOS.

@@ -12,8 +12,9 @@
 
 /* Variant: card — fixed preview size matching Figma */
 .map-view--card {
-  width: 398px;
-  height: 198px;
+  width: min(100%, 398px);
+  aspect-ratio: 398 / 198;
+  height: auto;
   border-radius: var(--otds-size-corner-medium, 8px);
   border: 1px solid var(--otds-color-dim);
 }

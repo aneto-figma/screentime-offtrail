@@ -1,9 +1,12 @@
 .map-screen {
+  background-color: var(--otds-bg-brand-primary);
+}
+
+.map-screen__content {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100svh;
-  background-color: var(--otds-bg-brand-primary);
+  min-height: 0;
+  overflow: hidden;
 }
 
 /* --- Map region: fills available space above the bottom sheet --- */
@@ -66,4 +69,44 @@
   gap: var(--otds-size-gap-medium);
   padding: 0 var(--otds-size-padding-medium);
   box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+  .map-screen__content {
+    flex-direction: row;
+  }
+
+  .map-screen__map-region {
+    flex: 1 1 auto;
+  }
+
+  .map-screen__search {
+    top: var(--otds-app-gutter-block);
+    left: var(--otds-app-gutter-inline);
+    right: auto;
+    width: var(--otds-app-control-width);
+    justify-content: flex-start;
+  }
+
+  .map-screen__tabs {
+    bottom: var(--otds-app-gutter-block);
+    left: var(--otds-app-gutter-inline);
+    right: var(--otds-app-gutter-inline);
+    padding: 0;
+  }
+
+  .map-screen__sheet {
+    width: auto;
+    flex: 0 0 var(--otds-app-panel-width);
+    height: 100%;
+    border-left: 1px solid var(--otds-color-dim);
+  }
+
+  .map-screen__sheet .bottom-sheet__handle-bar {
+    display: none;
+  }
+
+  .map-screen__events {
+    padding: var(--otds-app-gutter-block) var(--otds-app-gutter);
+  }
 }

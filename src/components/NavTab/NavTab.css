@@ -34,3 +34,42 @@
 .nav-tab--active .nav-tab__icon {
   color: var(--otds-color-brand-primary, #ff932e);
 }
+
+.nav-tab__label {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .nav-tab {
+    width: 100%;
+    height: 68px;
+    justify-content: center;
+    gap: var(--otds-size-gap-xsmall, 4px);
+  }
+
+  .nav-tab__indicator {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 2px;
+    height: 44px;
+    transform: translateY(-50%);
+  }
+
+  .nav-tab__icon {
+    margin: 0;
+  }
+
+  .nav-tab__label {
+    display: block;
+    font-family: var(--otds-font-family-mono, monospace);
+    font-size: 11px;
+    line-height: 1.2;
+    color: var(--otds-color-secondary, rgba(255, 255, 255, 0.6));
+    text-transform: uppercase;
+  }
+
+  .nav-tab--active .nav-tab__label {
+    color: var(--otds-color-brand-primary, #ff932e);
+  }
+}

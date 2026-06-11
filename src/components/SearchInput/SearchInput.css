@@ -2,7 +2,8 @@
   display: flex;
   gap: var(--otds-size-padding-small);
   align-items: center;
-  width: 320px;
+  width: var(--otds-app-control-width, 320px);
+  max-width: calc(100vw - var(--otds-app-gutter-inline, 16px) * 2);
   padding: var(--otds-size-padding-small) var(--otds-size-padding-medium);
   background-color: var(--otds-bg-on-brand);
   border: 1px solid var(--otds-color-dim);

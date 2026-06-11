@@ -1,8 +1,4 @@
 .home {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100svh;
   background-color: var(--otds-bg-brand-primary);
 }
 
@@ -11,13 +7,12 @@
 .home__content {
   display: flex;
   flex-direction: column;
-  gap: var(--otds-size-padding-xlarge);
-  flex: 1 1 0;
+  gap: var(--otds-app-density-block);
   min-height: 0;
   width: 100%;
   overflow-y: auto;
-  padding: var(--otds-size-padding-medium);
-  box-sizing: border-box;
+  padding: var(--otds-app-gutter-block) var(--otds-app-gutter-inline)
+    calc(var(--otds-app-content-bottom) + var(--otds-app-gutter-block));
 }
 
 /* --- Header --- */
@@ -86,7 +81,10 @@
 /* --- Guides carousel card sizing --- */
 
 .home__section--guides .card-guide {
-  width: calc((100vw - var(--otds-size-padding-medium) * 2 - var(--otds-size-gap-small)) / 2);
+  width: min(
+    220px,
+    calc((100vw - var(--otds-app-gutter-inline) * 2 - var(--otds-size-gap-small)) / 2)
+  );
 }
 
 /* --- Events list --- */
@@ -95,4 +93,52 @@
   display: flex;
   flex-direction: column;
   gap: var(--otds-size-padding-xlarge);
+}
+
+@media (min-width: 1024px) {
+  .home__content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.9fr);
+    grid-template-areas:
+      "header header"
+      "location featured"
+      "guides upcoming";
+    align-content: start;
+    gap: var(--otds-app-grid-gap);
+    max-width: var(--otds-app-page-max);
+    margin: 0 auto;
+    padding-bottom: var(--otds-app-gutter-block);
+  }
+
+  .home__header {
+    grid-area: header;
+  }
+
+  .home__section--location {
+    grid-area: location;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+    align-items: start;
+  }
+
+  .home__section--featured {
+    grid-area: featured;
+  }
+
+  .home__section--guides {
+    grid-area: guides;
+    gap: var(--otds-size-gap-large);
+  }
+
+  .home__section--upcoming {
+    grid-area: upcoming;
+  }
+
+  .home__section--guides .card-guide {
+    width: clamp(168px, 14vw, 220px);
+  }
+
+  .home__events {
+    gap: var(--otds-size-gap-large);
+  }
 }

@@ -3,8 +3,10 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  width: 170px;
-  height: 96px;
+  width: min(100%, 170px);
+  min-height: 96px;
+  height: auto;
+  flex: 0 0 auto;
   padding: var(--otds-size-padding-small);
   border-top: var(--otds-size-border) solid var(--otds-color-border-secondary);
   border-left: var(--otds-size-border) solid var(--otds-color-border-secondary);

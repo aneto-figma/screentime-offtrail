@@ -9,6 +9,7 @@ import Button from './components/Button/Button'
 import Facepile from './components/Facepile/Facepile'
 import Carousel from './components/Carousel/Carousel'
 import EventNav from './components/EventNav/EventNav'
+import AppShell from './components/AppShell/AppShell'
 import { getEvent } from './data/events'
 import './EventDetail.css'
 
@@ -31,7 +32,12 @@ export default function EventDetail() {
     .join(' ')
 
   return (
-    <div className={classes}>
+    <AppShell
+      active=""
+      navVisibility="desktop"
+      className="event-detail-shell"
+      contentClassName={classes}
+    >
       {/* Hero */}
       <header className="event-detail__hero">
         <img
@@ -149,6 +155,6 @@ export default function EventDetail() {
         location={event.city}
         buttonLabel={event.cta}
       />
-    </div>
+    </AppShell>
   )
 }

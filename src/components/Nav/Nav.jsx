@@ -3,9 +3,9 @@ import NavTab from '../NavTab/NavTab'
 import './Nav.css'
 
 const navItems = [
-  { key: 'Home', icon: 'home', path: '/home' },
-  { key: 'Map', icon: 'location', path: '/map' },
-  { key: 'Profile', icon: 'user', path: '/profile' },
+  { key: 'Home', icon: 'home', label: 'Home', path: '/home' },
+  { key: 'Map', icon: 'location', label: 'Map', path: '/map' },
+  { key: 'Profile', icon: 'user', label: 'Profile', path: '/profile' },
 ]
 
 export default function Nav({
@@ -28,6 +28,7 @@ export default function Nav({
           <NavTab
             key={item.key}
             icon={item.icon}
+            label={item.label}
             active={activeKey === item.key}
             onClick={() => navigate(item.path)}
           />

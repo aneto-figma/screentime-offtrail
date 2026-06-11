@@ -3,7 +3,7 @@ import Avatar from './components/Avatar/Avatar'
 import Button from './components/Button/Button'
 import TileCallout from './components/TileCallout/TileCallout'
 import CardEvent from './components/CardEvent/CardEvent'
-import Nav from './components/Nav/Nav'
+import AppShell from './components/AppShell/AppShell'
 import { getEvent } from './data/events'
 import './Profile.css'
 
@@ -17,8 +17,7 @@ export default function Profile() {
   const openEvent = (id) => navigate(`/event/${id}`)
 
   return (
-    <div className="profile">
-      <div className="profile__content">
+    <AppShell active="Profile" className="profile" contentClassName="profile__content">
         {/* Avatar + identity */}
         <section className="profile__avatar-section">
           <div className="profile__header">
@@ -72,9 +71,6 @@ export default function Profile() {
             onClick={() => openEvent(past.id)}
           />
         </section>
-      </div>
-
-      <Nav active="Profile" />
-    </div>
+    </AppShell>
   )
 }

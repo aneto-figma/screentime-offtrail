@@ -43,3 +43,28 @@ export const WithOverlay = {
     overlay: 'Group Surf',
   },
 }
+
+export const MobileWidth = {
+  args: Large.args,
+  decorators: [
+    (Story) => (
+      <div style={{ width: 390, maxWidth: '100%' }}>
+        {Story()}
+      </div>
+    ),
+  ],
+}
+
+export const DesktopWidth = {
+  args: {
+    ...Large.args,
+    overlay: 'Group Surf',
+  },
+  decorators: [
+    (Story) => (
+      <div style={{ width: 680, maxWidth: '100%' }}>
+        {Story()}
+      </div>
+    ),
+  ],
+}

@@ -2,18 +2,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 430px;
+  width: min(100%, 430px);
+  max-width: 100%;
   background-color: var(--otds-bg-brand-primary);
   border-radius: var(--otds-size-corner-large) var(--otds-size-corner-large) 0 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .bottom-sheet--default {
-  height: 320px;
+  height: min(320px, 42svh);
 }
 
 .bottom-sheet--tall {
-  height: 520px;
+  height: min(520px, 70svh);
 }
 
 .bottom-sheet__handle-bar {
@@ -38,4 +40,5 @@
   flex: 1 0 0;
   width: 100%;
   min-height: 0;
+  overflow-y: auto;
 }

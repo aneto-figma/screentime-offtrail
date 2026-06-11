@@ -1,7 +1,7 @@
 .nav {
   position: relative;
   width: 100%;
-  height: 64px;
+  height: var(--otds-app-nav-size, 64px);
   background: var(--otds-bg-brand-primary, #10071b);
   border-top: 1px solid var(--otds-color-dim, rgba(255, 255, 255, 0.1));
 }
@@ -14,4 +14,23 @@
   display: flex;
   align-items: center;
   gap: var(--otds-size-gap-xxlarge, 56px);
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    width: var(--otds-app-nav-size, 96px);
+    height: 100svh;
+    border-top: 0;
+    border-right: 1px solid var(--otds-color-dim, rgba(255, 255, 255, 0.1));
+  }
+
+  .nav__items {
+    position: static;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--otds-size-gap-large, 24px);
+  }
 }

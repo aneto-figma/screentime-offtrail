@@ -6,7 +6,7 @@ import CardEvent from './components/CardEvent/CardEvent'
 import CardGuide from './components/CardGuide/CardGuide'
 import Carousel from './components/Carousel/Carousel'
 import TileLocation from './components/TileLocation/TileLocation'
-import Nav from './components/Nav/Nav'
+import AppShell from './components/AppShell/AppShell'
 import { getEvent } from './data/events'
 import './Home.css'
 
@@ -24,8 +24,7 @@ export default function Home() {
   const openEvent = (id) => navigate(`/event/${id}`)
 
   return (
-    <div className="home">
-      <div className="home__content">
+    <AppShell active="Home" className="home" contentClassName="home__content">
         <div className="home__header">
           <Logo />
           <BrandIcon glyph="search" />
@@ -113,9 +112,6 @@ export default function Home() {
             />
           </div>
         </div>
-      </div>
-
-      <Nav active="Home" />
-    </div>
+    </AppShell>
   )
 }
