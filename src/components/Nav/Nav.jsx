@@ -1,6 +1,6 @@
 import { useNavigate, useLocation } from 'react-router-dom'
-import BrandIcon from '../BrandIcon/BrandIcon'
 import Logo from '../Logo/Logo'
+import SearchInput from '../SearchInput/SearchInput'
 import NavTab from '../NavTab/NavTab'
 import './Nav.css'
 
@@ -27,15 +27,7 @@ export default function Nav({
       <div className="nav__header">
         <Logo className="nav__logo" />
       </div>
-      <div className="nav__search-container">
-        <BrandIcon glyph="search" className="nav__search-icon" />
-        <input
-          type="text"
-          className="nav__search-input"
-          placeholder="Search"
-          aria-label="Search"
-        />
-      </div>
+      <SearchInput placeholder="Search" className="nav__search" />
       <div className="nav__items">
         {navItems.map((item) => (
           <NavTab

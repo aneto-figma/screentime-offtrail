@@ -30,12 +30,9 @@ export default function Home() {
           <BrandIcon glyph="search" />
         </div>
 
-        {/* Location & Weather */}
-        <div className="home__section home__section--location">
-          <div className="home__heading">
-            <p className="home__heading-label">Current Location</p>
-            <p className="home__heading-title">Los Angeles</p>
-          </div>
+        {/* Events Nearby + Weather */}
+        <div className="home__section home__section--top">
+          <TileLocation location="Los Angeles" />
           <TileWeather
             time="3:43PM"
             conditions="Light Rain"
@@ -45,9 +42,8 @@ export default function Home() {
           />
         </div>
 
-        {/* Events Nearby + Guides */}
-        <div className="home__section home__section--sidebar">
-          <TileLocation location="Los Angeles" />
+        {/* Guides */}
+        <div className="home__section home__section--guides">
           <Carousel title="Guides">
             <CardGuide src={imgAmelia} name="Amelia B." category="SURFING" />
             <CardGuide src={imgTeresa} name="Teresa M." category="MEDITATION" />
