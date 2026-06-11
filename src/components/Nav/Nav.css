@@ -49,10 +49,9 @@
 
   .nav__search {
     display: flex;
-    width: auto;
-    max-width: none;
     margin: 0 var(--otds-size-padding-medium, 16px);
-    --otds-app-control-width: 100%;
+    --otds-app-control-width: calc(var(--otds-app-nav-size) - 2 * var(--otds-size-padding-medium, 16px));
+    max-width: calc(var(--otds-app-nav-size) - 2 * var(--otds-size-padding-medium, 16px));
   }
 
   .nav__items {

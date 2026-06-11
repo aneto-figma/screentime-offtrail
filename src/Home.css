@@ -64,12 +64,13 @@
 }
 
 .home__heading-title {
-  font-family: var(--otds-font-family-sans);
-  font-weight: 500;
-  font-size: var(--otds-size-font-3xlarge);
-  line-height: 1.12;
+  font-family: var(--otds-font-family-headline);
+  font-weight: 400;
+  font-size: var(--otds-size-font-7xlarge);
+  line-height: 1;
   letter-spacing: var(--otds-size-letter-spacing-snug);
   color: var(--otds-color-primary);
+  text-transform: uppercase;
 }
 
 /* --- Section headers --- */
@@ -135,6 +136,7 @@
   .home__section--top .tile-weather {
     flex: 0 0 auto;
     width: auto;
+    min-width: 320px;
   }
 
   .home__section--guides {

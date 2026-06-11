@@ -13,7 +13,7 @@ import './Home.css'
 import imgAmelia from './assets/images/portraits/Portrait-05.png'
 import imgTeresa from './assets/images/portraits/Portrait-12.png'
 import imgKarim from './assets/images/portraits/Portrait-13.png'
-import imgJordan from './assets/images/portraits/Portrait-01.png'
+import imgJordan from './assets/images/portraits/Portrait-06.png'
 import imgMaya from './assets/images/portraits/Portrait-02.png'
 import imgLeo from './assets/images/portraits/Portrait-04.png'
 
@@ -76,7 +76,7 @@ export default function Home() {
             people={featured.people}
             time={featured.time}
             size="large"
-            overlay={featured.overlay}
+
             month={featured.month}
             day={featured.day}
             onClick={() => openEvent(featured.id)}
@@ -116,7 +116,7 @@ export default function Home() {
               people={weekendSurf.people}
               time={weekendSurf.time}
               size="large"
-              overlay="Group Surf"
+
               month={weekendSurf.month}
               day={weekendSurf.day}
               onClick={() => openEvent(weekendSurf.id)}
