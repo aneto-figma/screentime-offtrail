@@ -133,7 +133,8 @@
   .home__section--top {
     grid-area: top;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: var(--otds-app-grid-gap);
   }
 
