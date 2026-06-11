@@ -25,7 +25,7 @@ export default function Button({
   return (
     <button className={classes} onClick={onClick}>
       {label}
-      {icon && <Icon glyph="out" className="button__icon" />}
+      {icon && <Icon glyph="arrow-up-right" className="button__icon" />}
     </button>
   )
 }

@@ -1,16 +1,16 @@
 :root {
   /* --- Existing app tokens --- */
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
+  --text: #9ca3af;
+  --text-h: #f3f4f6;
+  --bg: #16171d;
+  --border: #2e303a;
+  --code-bg: #1f2028;
+  --accent: #c084fc;
+  --accent-bg: rgba(192, 132, 252, 0.15);
+  --accent-border: rgba(192, 132, 252, 0.5);
+  --social-bg: rgba(47, 48, 58, 0.5);
   --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+    rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -67,27 +67,27 @@
   --ads-size-border: 1px;
   --sds-size-stroke-border: 1px;
 
-  /* --- OTDS Design System: Semantic Colors — Foreground (Light) --- */
-  --otds-color-primary: #2c3039;
-  --otds-color-secondary: rgba(16, 7, 27, 0.6);
-  --otds-color-tertiary: rgba(16, 7, 27, 0.4);
-  --otds-color-dim: rgba(16, 7, 27, 0.09);
-  --otds-color-brand-primary: #e76f00;
-  --otds-color-brand-secondary: #ffbf58;
-  --otds-color-brand-tertiary: #e76f00;
-  --otds-color-alt: #5f788e;
-  --otds-color-on-reverse: #ffffff;
-  --otds-color-on-reverse-secondary: rgba(255, 255, 255, 0.2);
+  /* --- OTDS Design System: Semantic Colors — Foreground --- */
+  --otds-color-primary: #ffffff;
+  --otds-color-secondary: rgba(255, 255, 255, 0.6);
+  --otds-color-tertiary: rgba(255, 255, 255, 0.4);
+  --otds-color-dim: rgba(255, 255, 255, 0.1);
+  --otds-color-brand-primary: #ff932e;
+  --otds-color-brand-secondary: #9e4700;
+  --otds-color-brand-tertiary: #ffbf58;
+  --otds-color-alt: #d2edff;
+  --otds-color-on-reverse: #2c3039;
+  --otds-color-on-reverse-secondary: rgba(16, 7, 27, 0.2);
 
-  /* --- OTDS Design System: Semantic Colors — Border (Light) --- */
-  --otds-color-border-primary: #e76f00;
-  --otds-color-border-secondary: #86a8c0;
+  /* --- OTDS Design System: Semantic Colors — Border --- */
+  --otds-color-border-primary: #ffbf58;
+  --otds-color-border-secondary: #bbe4ff;
 
-  /* --- OTDS Design System: Semantic Colors — Background (Light) --- */
-  --otds-bg-brand-primary: #ffffff;
-  --otds-bg-brand-secondary: #d2edff;
-  --otds-bg-on-brand: rgba(16, 7, 27, 0.09);
-  --otds-bg-map: #8497a8;
+  /* --- OTDS Design System: Semantic Colors — Background --- */
+  --otds-bg-brand-primary: #10071b;
+  --otds-bg-brand-secondary: #424857;
+  --otds-bg-on-brand: rgba(255, 255, 255, 0.1);
+  --otds-bg-map: #595360;
 
   /* --- OTDS Design System: Black Palette --- */
   --otds-black-100: #10071b;
@@ -131,7 +131,7 @@
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
-  color-scheme: light dark;
+  color-scheme: dark;
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
@@ -141,44 +141,6 @@
 
   @media (max-width: 1024px) {
     font-size: 16px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-
-    /* --- OTDS Semantic Colors (Dark) --- */
-    --otds-color-primary: #ffffff;
-    --otds-color-secondary: rgba(255, 255, 255, 0.6);
-    --otds-color-tertiary: rgba(255, 255, 255, 0.4);
-    --otds-color-dim: rgba(255, 255, 255, 0.1);
-    --otds-color-brand-primary: #ff932e;
-    --otds-color-brand-secondary: #9e4700;
-    --otds-color-brand-tertiary: #ffbf58;
-    --otds-color-alt: #d2edff;
-    --otds-color-on-reverse: #2c3039;
-    --otds-color-on-reverse-secondary: rgba(16, 7, 27, 0.2);
-    --otds-color-border-primary: #ffbf58;
-    --otds-color-border-secondary: #bbe4ff;
-    --otds-bg-brand-primary: #10071b;
-    --otds-bg-brand-secondary: #424857;
-    --otds-bg-on-brand: rgba(255, 255, 255, 0.1);
-    --otds-bg-map: #595360;
-  }
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
   }
 }
 

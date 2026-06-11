@@ -74,6 +74,7 @@
 
 .landing__text-secondary {
   color: var(--otds-white-300);
+  font-weight: 500;
 }
 
 .landing__buttons {

@@ -8,6 +8,10 @@ export default {
       control: 'select',
       options: MapView.variants,
     },
+    mode: {
+      control: 'select',
+      options: MapView.modes,
+    },
     zoom: {
       control: { type: 'range', min: 1, max: 20, step: 0.5 },
     },

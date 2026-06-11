@@ -8,7 +8,6 @@ import radarLightInner from '../../assets/images/map/radar-light-inner.png'
 import radarLightMid from '../../assets/images/map/radar-light-mid.png'
 import MapView from '../MapView/MapView'
 import MapPin from '../MapPin/MapPin'
-import useSystemMode from '../../hooks/useSystemMode'
 import './TileLocation.css'
 
 const radarImages = {
@@ -28,11 +27,15 @@ export default function TileLocation({
   location = 'Location',
   latitude = 34.07,
   longitude = -118.25,
+  mode = 'Dark',
   className = '',
 }) {
-  const mode = useSystemMode()
   const radar = radarImages[mode]
-  const classes = ['tile-location', className].filter(Boolean).join(' ')
+  const classes = [
+    'tile-location',
+    `tile-location--${mode.toLowerCase()}`,
+    className,
+  ].filter(Boolean).join(' ')
 
   return (
     <div className={classes}>
@@ -42,6 +45,7 @@ export default function TileLocation({
       <MapView
         className="tile-location__map"
         variant="full"
+        mode={mode}
         latitude={latitude}
         longitude={longitude}
         zoom={14}
