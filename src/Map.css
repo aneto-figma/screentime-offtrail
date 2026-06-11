@@ -33,23 +33,19 @@
   right: 0;
   display: flex;
   justify-content: center;
-  z-index: 1;
+  z-index: 3;
 }
 
-/* --- Filter chips along the bottom of the map region --- */
+/* --- Filter chips --- */
 
 .map-screen__tabs {
-  position: absolute;
-  bottom: var(--otds-size-padding-xsmall);
-  left: 0;
-  right: 0;
   display: flex;
   gap: var(--otds-size-gap-small);
-  padding: 0 var(--otds-size-padding-small);
+  padding: 0 var(--otds-size-padding-medium);
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-width: none;
-  z-index: 1;
+  flex-shrink: 0;
 }
 
 .map-screen__tabs::-webkit-scrollbar {
@@ -73,7 +69,7 @@
 
 @media (min-width: 1024px) {
   .map-screen__content {
-    flex-direction: row;
+    position: relative;
   }
 
   .map-screen__map-region {
@@ -82,31 +78,37 @@
 
   .map-screen__search {
     top: var(--otds-app-gutter-block);
-    left: var(--otds-app-gutter-inline);
-    right: auto;
-    width: var(--otds-app-control-width);
-    justify-content: flex-start;
-  }
-
-  .map-screen__tabs {
-    bottom: var(--otds-app-gutter-block);
-    left: var(--otds-app-gutter-inline);
+    left: calc(var(--otds-app-gutter-inline) + var(--otds-app-panel-width) + var(--otds-app-gutter-inline));
     right: var(--otds-app-gutter-inline);
-    padding: 0;
+    width: auto;
+    justify-content: center;
   }
 
   .map-screen__sheet {
-    width: auto;
-    flex: 0 0 var(--otds-app-panel-width);
-    height: 100%;
-    border-left: 1px solid var(--otds-color-dim);
+    position: absolute;
+    top: var(--otds-app-gutter-block);
+    left: var(--otds-app-gutter-inline);
+    bottom: var(--otds-app-gutter-block);
+    width: var(--otds-app-panel-width);
+    height: auto;
+    border-radius: var(--otds-size-corner-large);
+    border: 1px solid var(--otds-color-dim);
+    z-index: 2;
+  }
+
+  .map-screen__sheet.bottom-sheet--default {
+    height: auto;
   }
 
   .map-screen__sheet .bottom-sheet__handle-bar {
     display: none;
   }
 
+  .map-screen__tabs {
+    padding: var(--otds-size-padding-medium) var(--otds-size-padding-medium) 0;
+  }
+
   .map-screen__events {
-    padding: var(--otds-app-gutter-block) var(--otds-app-gutter);
+    padding: var(--otds-size-padding-medium) var(--otds-app-gutter);
   }
 }
