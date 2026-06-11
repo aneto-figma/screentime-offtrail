@@ -106,9 +106,9 @@
     grid-template-columns: 1fr;
     grid-template-areas:
       "top"
+      "featured"
       "guides"
       "nearby"
-      "featured"
       "upcoming";
     align-content: start;
     gap: var(--otds-app-grid-gap);

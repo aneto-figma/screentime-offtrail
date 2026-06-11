@@ -49,23 +49,6 @@ export default function Home() {
           />
         </div>
 
-        {/* Guides */}
-        <div className="home__section home__section--guides">
-          <Carousel title="Guides">
-            <CardGuide src={imgAmelia} name="Amelia B." category="SURFING" />
-            <CardGuide src={imgTeresa} name="Teresa M." category="MEDITATION" />
-            <CardGuide src={imgKarim} name="Karim N." category="HIKING" />
-            <CardGuide src={imgJordan} name="Jordan P." category="CLIMBING" />
-            <CardGuide src={imgMaya} name="Maya R." category="YOGA" />
-            <CardGuide src={imgLeo} name="Leo C." category="CYCLING" />
-          </Carousel>
-        </div>
-
-        {/* Events Nearby */}
-        <div className="home__section home__section--nearby">
-          <TileLocation location="Los Angeles" />
-        </div>
-
         {/* Featured */}
         <div className="home__section home__section--featured">
           <p className="home__section-title">Featured</p>
@@ -81,6 +64,23 @@ export default function Home() {
             day={featured.day}
             onClick={() => openEvent(featured.id)}
           />
+        </div>
+
+        {/* Guides */}
+        <div className="home__section home__section--guides">
+          <Carousel title="Guides">
+            <CardGuide src={imgAmelia} name="Amelia B." category="SURFING" />
+            <CardGuide src={imgTeresa} name="Teresa M." category="MEDITATION" />
+            <CardGuide src={imgKarim} name="Karim N." category="HIKING" />
+            <CardGuide src={imgJordan} name="Jordan P." category="CLIMBING" />
+            <CardGuide src={imgMaya} name="Maya R." category="YOGA" />
+            <CardGuide src={imgLeo} name="Leo C." category="CYCLING" />
+          </Carousel>
+        </div>
+
+        {/* Events Nearby */}
+        <div className="home__section home__section--nearby">
+          <TileLocation location="Los Angeles" />
         </div>
 
         {/* Upcoming Events */}
