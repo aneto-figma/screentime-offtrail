@@ -31,13 +31,11 @@ export default function Profile() {
             <Button label="Edit" colour="transparent-white" size="medium" />
             <Button label="Share" colour="transparent-white" size="medium" />
           </div>
-        </section>
-
-        {/* Event highlights */}
-        <section className="profile__stats">
-          <TileCallout variant="Highlight" label="HOSTED" value="12" />
-          <TileCallout variant="Highlight" label="FOLLOWERS" value="148" />
-          <TileCallout variant="Highlight" label="HOST RATING" value="4.9" />
+          <div className="profile__stats">
+            <TileCallout variant="Highlight" label="HOSTED" value="12" />
+            <TileCallout variant="Highlight" label="FOLLOWERS" value="148" />
+            <TileCallout variant="Highlight" label="HOST RATING" value="4.9" />
+          </div>
         </section>
 
         {/* Upcoming events */}
@@ -65,7 +63,7 @@ export default function Profile() {
             location={past.location}
             people={past.people}
             time={past.time}
-            size="large"
+            size="small"
             month={past.month}
             day={past.day}
             onClick={() => openEvent(past.id)}
