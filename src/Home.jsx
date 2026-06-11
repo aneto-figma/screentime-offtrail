@@ -13,11 +13,15 @@ import './Home.css'
 import imgAmelia from './assets/images/portraits/Portrait-05.png'
 import imgTeresa from './assets/images/portraits/Portrait-12.png'
 import imgKarim from './assets/images/portraits/Portrait-13.png'
+import imgJordan from './assets/images/portraits/Portrait-01.png'
+import imgMaya from './assets/images/portraits/Portrait-02.png'
+import imgLeo from './assets/images/portraits/Portrait-04.png'
 
 const featured = getEvent('canyon-crew')
 const morningRun = getEvent('morning-run')
 const horseback = getEvent('horseback')
 const weekendSurf = getEvent('weekend-surf')
+const trailRun = getEvent('trail-run')
 
 export default function Home() {
   const navigate = useNavigate()
@@ -30,9 +34,12 @@ export default function Home() {
           <BrandIcon glyph="search" />
         </div>
 
-        {/* Events Nearby + Weather */}
+        {/* Location & Weather */}
         <div className="home__section home__section--top">
-          <TileLocation location="Los Angeles" />
+          <div className="home__heading">
+            <p className="home__heading-label">Current Location</p>
+            <p className="home__heading-title">Los Angeles</p>
+          </div>
           <TileWeather
             time="3:43PM"
             conditions="Light Rain"
@@ -48,7 +55,15 @@ export default function Home() {
             <CardGuide src={imgAmelia} name="Amelia B." category="SURFING" />
             <CardGuide src={imgTeresa} name="Teresa M." category="MEDITATION" />
             <CardGuide src={imgKarim} name="Karim N." category="HIKING" />
+            <CardGuide src={imgJordan} name="Jordan P." category="CLIMBING" />
+            <CardGuide src={imgMaya} name="Maya R." category="YOGA" />
+            <CardGuide src={imgLeo} name="Leo C." category="CYCLING" />
           </Carousel>
+        </div>
+
+        {/* Events Nearby */}
+        <div className="home__section home__section--nearby">
+          <TileLocation location="Los Angeles" />
         </div>
 
         {/* Featured */}
@@ -105,6 +120,17 @@ export default function Home() {
               month={weekendSurf.month}
               day={weekendSurf.day}
               onClick={() => openEvent(weekendSurf.id)}
+            />
+            <CardEvent
+              src={trailRun.src}
+              title={trailRun.title}
+              location={trailRun.location}
+              people={trailRun.people}
+              time={trailRun.time}
+              size="large"
+              month={trailRun.month}
+              day={trailRun.day}
+              onClick={() => openEvent(trailRun.id)}
             />
           </div>
         </div>

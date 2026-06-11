@@ -52,6 +52,7 @@
     width: auto;
     max-width: none;
     margin: 0 var(--otds-size-padding-medium, 16px);
+    --otds-app-control-width: 100%;
   }
 
   .nav__items {
