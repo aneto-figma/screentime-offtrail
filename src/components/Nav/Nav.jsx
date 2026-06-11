@@ -1,4 +1,6 @@
 import { useNavigate, useLocation } from 'react-router-dom'
+import IconButton from '../IconButton/IconButton'
+import Logo from '../Logo/Logo'
 import NavTab from '../NavTab/NavTab'
 import './Nav.css'
 
@@ -23,6 +25,18 @@ export default function Nav({
 
   return (
     <div className={`nav ${className}`}>
+      <div className="nav__header">
+        <Logo className="nav__logo" />
+        <IconButton
+          glyph="search"
+          variant="neutral"
+          size="small"
+          className="nav__search"
+          type="button"
+          aria-label="Search"
+          onClick={() => navigate('/map')}
+        />
+      </div>
       <div className="nav__items">
         {navItems.map((item) => (
           <NavTab

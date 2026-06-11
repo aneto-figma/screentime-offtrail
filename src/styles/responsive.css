@@ -31,7 +31,7 @@
     --otds-app-gutter: var(--otds-size-padding-xlarge);
     --otds-app-gutter-inline: clamp(32px, 4vw, 64px);
     --otds-app-gutter-block: var(--otds-size-padding-xlarge);
-    --otds-app-nav-size: 96px;
+    --otds-app-nav-size: clamp(200px, 18vw, 240px);
     --otds-app-panel-width: clamp(340px, 28vw, 400px);
     --otds-app-grid-gap: var(--otds-size-gap-xlarge);
     --otds-app-control-width: min(100%, 520px);

@@ -100,7 +100,6 @@
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.9fr);
     grid-template-areas:
-      "header header"
       "location featured"
       "guides upcoming";
     align-content: start;
@@ -111,7 +110,7 @@
   }
 
   .home__header {
-    grid-area: header;
+    display: none;
   }
 
   .home__section--location {
