@@ -121,9 +121,15 @@
       "upcoming";
     align-content: start;
     gap: var(--otds-app-grid-gap);
-    max-width: var(--otds-app-page-max);
-    margin: 0 auto;
     padding-bottom: var(--otds-app-gutter-block);
+  }
+
+  .home__section {
+    max-width: var(--otds-app-page-max);
+  }
+
+  .home__section--guides {
+    max-width: none;
   }
 
   .home__header {
