@@ -83,7 +83,16 @@
   color: var(--otds-color-primary);
 }
 
-/* --- Guides carousel card sizing --- */
+/* --- Guides carousel --- */
+
+.home__section--guides .carousel__track {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  margin-left: calc(-1 * var(--otds-app-gutter-inline));
+  margin-right: calc(-1 * var(--otds-app-gutter-inline));
+  padding-left: var(--otds-app-gutter-inline);
+  padding-right: var(--otds-app-gutter-inline);
+}
 
 .home__section--guides .card-guide {
   width: min(
@@ -141,15 +150,6 @@
 
   .home__section--guides {
     grid-area: guides;
-  }
-
-  .home__section--guides .carousel__track {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
   }
 
   .home__section--nearby {
