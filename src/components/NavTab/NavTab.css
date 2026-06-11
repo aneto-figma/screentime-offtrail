@@ -48,7 +48,7 @@
     justify-content: flex-start;
     gap: var(--otds-size-gap-small, 8px);
     padding: 0 var(--otds-size-padding-small, 12px) 0 var(--otds-size-padding-medium, 16px);
-    border-radius: var(--otds-size-corner-medium, 8px);
+    border-radius: 0;
   }
 
   .nav-tab--active {
@@ -57,11 +57,11 @@
 
   .nav-tab__indicator {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
     width: 2px;
-    height: 24px;
-    transform: translateY(-50%);
+    height: 100%;
+    transform: none;
   }
 
   .nav-tab__icon {

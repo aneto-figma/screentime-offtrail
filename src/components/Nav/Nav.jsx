@@ -1,5 +1,5 @@
 import { useNavigate, useLocation } from 'react-router-dom'
-import IconButton from '../IconButton/IconButton'
+import BrandIcon from '../BrandIcon/BrandIcon'
 import Logo from '../Logo/Logo'
 import NavTab from '../NavTab/NavTab'
 import './Nav.css'
@@ -17,7 +17,6 @@ export default function Nav({
   const navigate = useNavigate()
   const location = useLocation()
 
-  // Derive active tab from the URL when not explicitly provided
   const activeKey =
     active ??
     navItems.find((item) => item.path === location.pathname)?.key ??
@@ -27,14 +26,14 @@ export default function Nav({
     <div className={`nav ${className}`}>
       <div className="nav__header">
         <Logo className="nav__logo" />
-        <IconButton
-          glyph="search"
-          variant="neutral"
-          size="small"
-          className="nav__search"
-          type="button"
+      </div>
+      <div className="nav__search-container">
+        <BrandIcon glyph="search" className="nav__search-icon" />
+        <input
+          type="text"
+          className="nav__search-input"
+          placeholder="Search"
           aria-label="Search"
-          onClick={() => navigate('/map')}
         />
       </div>
       <div className="nav__items">

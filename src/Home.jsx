@@ -45,6 +45,16 @@ export default function Home() {
           />
         </div>
 
+        {/* Events Nearby + Guides */}
+        <div className="home__section home__section--sidebar">
+          <TileLocation location="Los Angeles" />
+          <Carousel title="Guides">
+            <CardGuide src={imgAmelia} name="Amelia B." category="SURFING" />
+            <CardGuide src={imgTeresa} name="Teresa M." category="MEDITATION" />
+            <CardGuide src={imgKarim} name="Karim N." category="HIKING" />
+          </Carousel>
+        </div>
+
         {/* Featured */}
         <div className="home__section home__section--featured">
           <p className="home__section-title">Featured</p>
@@ -60,16 +70,6 @@ export default function Home() {
             day={featured.day}
             onClick={() => openEvent(featured.id)}
           />
-        </div>
-
-        {/* Guides + Location tile */}
-        <div className="home__section home__section--guides">
-          <Carousel title="Guides">
-            <CardGuide src={imgAmelia} name="Amelia B." category="SURFING" />
-            <CardGuide src={imgTeresa} name="Teresa M." category="MEDITATION" />
-            <CardGuide src={imgKarim} name="Karim N." category="HIKING" />
-          </Carousel>
-          <TileLocation location="Los Angeles" />
         </div>
 
         {/* Upcoming Events */}

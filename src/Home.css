@@ -40,7 +40,7 @@
   gap: var(--otds-size-gap-medium);
 }
 
-.home__section--guides {
+.home__section--sidebar {
   gap: var(--otds-size-padding-xxlarge);
 }
 
@@ -80,7 +80,7 @@
 
 /* --- Guides carousel card sizing --- */
 
-.home__section--guides .card-guide {
+.home__section--sidebar .card-guide {
   width: min(
     220px,
     calc((100vw - var(--otds-app-gutter-inline) * 2 - var(--otds-size-gap-small)) / 2)
@@ -100,8 +100,9 @@
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.9fr);
     grid-template-areas:
-      "location featured"
-      "guides upcoming";
+      "location sidebar"
+      "featured featured"
+      "upcoming upcoming";
     align-content: start;
     gap: var(--otds-app-grid-gap);
     max-width: var(--otds-app-page-max);
@@ -115,29 +116,30 @@
 
   .home__section--location {
     grid-area: location;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
-    align-items: start;
+    flex-direction: column;
+    gap: var(--otds-size-padding-large);
+  }
+
+  .home__section--sidebar {
+    grid-area: sidebar;
+    gap: var(--otds-size-gap-large);
   }
 
   .home__section--featured {
     grid-area: featured;
   }
 
-  .home__section--guides {
-    grid-area: guides;
-    gap: var(--otds-size-gap-large);
-  }
-
   .home__section--upcoming {
     grid-area: upcoming;
   }
 
-  .home__section--guides .card-guide {
+  .home__section--sidebar .card-guide {
     width: clamp(168px, 14vw, 220px);
   }
 
   .home__events {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: var(--otds-size-gap-large);
   }
 }
