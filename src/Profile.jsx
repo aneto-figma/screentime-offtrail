@@ -55,8 +55,20 @@ export default function Profile() {
         </section>
 
         {/* Past events */}
-        <section className="profile__section">
+        <section className="profile__section profile__section--past">
           <p className="profile__section-title">Past events</p>
+          <CardEvent
+            src={past.src}
+            title={past.title}
+            location={past.location}
+            people={past.people}
+            time={past.time}
+            size="large"
+            month={past.month}
+            day={past.day}
+            className="profile__past-mobile"
+            onClick={() => openEvent(past.id)}
+          />
           <CardEvent
             src={past.src}
             title={past.title}
@@ -66,6 +78,7 @@ export default function Profile() {
             size="small"
             month={past.month}
             day={past.day}
+            className="profile__past-desktop"
             onClick={() => openEvent(past.id)}
           />
         </section>

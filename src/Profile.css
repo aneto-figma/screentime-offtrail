@@ -97,6 +97,10 @@
   margin: 0;
 }
 
+.profile__past-desktop {
+  display: none;
+}
+
 @media (min-width: 1024px) {
   .profile__content {
     display: grid;
@@ -122,5 +126,13 @@
   .profile__stats {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .profile__past-mobile {
+    display: none;
+  }
+
+  .profile__past-desktop {
+    display: block;
   }
 }
