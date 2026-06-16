@@ -108,10 +108,14 @@
     height: auto;
     border-radius: var(--otds-size-corner-large);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    background: var(--otds-white-600);
+    background-color: rgba(31, 32, 40, 0.9);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     z-index: 2;
+  }
+
+  .map-screen__events .card-event--small .card-event__meta {
+    display: none;
   }
 
   .map-screen__sheet.bottom-sheet--default {
