@@ -7,6 +7,7 @@ import CardGuide from './components/CardGuide/CardGuide'
 import Carousel from './components/Carousel/Carousel'
 import TileLocation from './components/TileLocation/TileLocation'
 import AppShell from './components/AppShell/AppShell'
+import DesktopTopNav from './components/DesktopTopNav/DesktopTopNav'
 import { getEvent } from './data/events'
 import './Home.css'
 
@@ -29,6 +30,7 @@ export default function Home() {
 
   return (
     <AppShell active="Home" className="home" contentClassName="home__content">
+      <div className="home__mobile">
         <div className="home__header">
           <Logo />
           <BrandIcon glyph="search" />
@@ -134,6 +136,140 @@ export default function Home() {
             />
           </div>
         </div>
+      </div>
+
+      <div className="home__desktop">
+        <DesktopTopNav tone="dark" />
+
+        <section className="home-desktop__overview" aria-labelledby="home-desktop-location-title">
+          <div className="home-desktop__location-panel">
+            <div className="home__heading">
+              <p className="home__heading-label">Current Location</p>
+              <p id="home-desktop-location-title" className="home__heading-title">
+                Los Angeles
+              </p>
+            </div>
+            <TileWeather
+              className="home-desktop__weather"
+              time="3:43PM"
+              conditions="Light Rain"
+              temp="65°F"
+              low="42°"
+              high="67°"
+            />
+            <div className="home-desktop__search" aria-label="Search events">
+              {[
+                ['Where', 'Search locations'],
+                ['What', 'Search activities'],
+                ['When', 'Search dates'],
+              ].map(([label, value]) => (
+                <div className="home-desktop__search-field" key={label}>
+                  <span>{label}</span>
+                  <p>{value}</p>
+                </div>
+              ))}
+              <button className="home-desktop__search-button" type="button">
+                <BrandIcon glyph="search" />
+                <span className="home-desktop__sr-only">Search</span>
+              </button>
+            </div>
+          </div>
+
+          <div className="home-desktop__featured-panel">
+            <div className="home-desktop__panel-heading">
+              <p className="home__section-title">Featured</p>
+            </div>
+            <CardEvent
+              className="home-desktop__featured-card"
+              src={featured.src}
+              title={featured.title}
+              location={featured.location}
+              people={featured.people}
+              time={featured.time}
+              size="large"
+              month={featured.month}
+              day={featured.day}
+              onClick={() => openEvent(featured.id)}
+            />
+          </div>
+        </section>
+
+        <div className="home-desktop__workspace">
+          <section className="home-desktop__panel home-desktop__panel--guides">
+            <Carousel title="Guides">
+              <CardGuide src={imgAmelia} name="Amelia B." category="SURFING" />
+              <CardGuide src={imgTeresa} name="Teresa M." category="MEDITATION" />
+              <CardGuide src={imgKarim} name="Karim N." category="HIKING" />
+              <CardGuide src={imgJordan} name="Jordan P." category="CLIMBING" />
+              <CardGuide src={imgMaya} name="Maya R." category="YOGA" />
+              <CardGuide src={imgLeo} name="Leo C." category="CYCLING" />
+            </Carousel>
+          </section>
+
+          <section className="home-desktop__panel home-desktop__panel--nearby">
+            <div className="home-desktop__panel-heading">
+              <p className="home__section-title">Events Nearby</p>
+            </div>
+            <TileLocation
+              location="Los Angeles"
+              mode="Light"
+              className="home-desktop__nearby-tile"
+            />
+          </section>
+
+          <section className="home-desktop__panel home-desktop__panel--upcoming">
+            <div className="home-desktop__panel-heading">
+              <p className="home__section-title">Upcoming Events</p>
+            </div>
+            <div className="home-desktop__events-grid">
+              <CardEvent
+                src={morningRun.src}
+                title={morningRun.title}
+                location={morningRun.location}
+                people={morningRun.people}
+                time={morningRun.time}
+                size="large"
+                month={morningRun.month}
+                day={morningRun.day}
+                onClick={() => openEvent(morningRun.id)}
+              />
+              <CardEvent
+                src={horseback.src}
+                title={horseback.title}
+                location={horseback.location}
+                people={horseback.people}
+                time={horseback.time}
+                size="large"
+                month={horseback.month}
+                day={horseback.day}
+                onClick={() => openEvent(horseback.id)}
+              />
+              <CardEvent
+                src={weekendSurf.src}
+                title={weekendSurf.title}
+                location={weekendSurf.location}
+                people={weekendSurf.people}
+                time={weekendSurf.time}
+                size="large"
+                month={weekendSurf.month}
+                day={weekendSurf.day}
+                onClick={() => openEvent(weekendSurf.id)}
+              />
+              <CardEvent
+                src={trailRun.src}
+                title={trailRun.title}
+                location={trailRun.location}
+                people={trailRun.people}
+                time={trailRun.time}
+                size="large"
+                month={trailRun.month}
+                day={trailRun.day}
+                onClick={() => openEvent(trailRun.id)}
+              />
+            </div>
+          </section>
+        </div>
+      </div>
     </AppShell>
   )
 }
