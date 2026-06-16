@@ -74,7 +74,7 @@
 .home__heading-title {
   font-family: var(--otds-font-family-headline);
   font-weight: 400;
-  font-size: var(--otds-size-font-7xlarge);
+  font-size: var(--otds-size-font-display);
   line-height: 1;
   letter-spacing: var(--otds-size-letter-spacing-snug);
   color: var(--otds-color-primary);
