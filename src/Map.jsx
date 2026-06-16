@@ -4,7 +4,8 @@ import SearchInput from './components/SearchInput/SearchInput'
 import Chip from './components/Chip/Chip'
 import BottomSheet from './components/BottomSheet/BottomSheet'
 import CardEvent from './components/CardEvent/CardEvent'
-import Nav from './components/Nav/Nav'
+import AppShell from './components/AppShell/AppShell'
+import DesktopTopNav from './components/DesktopTopNav/DesktopTopNav'
 import { getEvent } from './data/events'
 import './Map.css'
 
@@ -17,7 +18,8 @@ export default function Map() {
   const events = EVENT_IDS.map(getEvent)
 
   return (
-    <div className="map-screen">
+    <AppShell active="Map" className="map-screen" contentClassName="map-screen__content">
+      <DesktopTopNav tone="dark" />
       <div className="map-screen__map-region">
         <MapView
           className="map-screen__map"
@@ -33,18 +35,20 @@ export default function Map() {
           ]}
         />
 
-        <div className="map-screen__search">
+        <div className="map-screen__search map-screen__search--mobile">
           <SearchInput placeholder="Find things to do..." />
         </div>
+      </div>
 
+      <BottomSheet size="Default" className="map-screen__sheet">
+        <div className="map-screen__search map-screen__search--desktop">
+          <SearchInput placeholder="Find things to do..." />
+        </div>
         <div className="map-screen__tabs">
           {FILTERS.map((label, i) => (
             <Chip key={label} label={label} active={i === 0} />
           ))}
         </div>
-      </div>
-
-      <BottomSheet size="Default" className="map-screen__sheet">
         <div className="map-screen__events">
           {events.map((event) => (
             <CardEvent
@@ -62,8 +66,6 @@ export default function Map() {
           ))}
         </div>
       </BottomSheet>
-
-      <Nav active="Map" />
-    </div>
+    </AppShell>
   )
 }

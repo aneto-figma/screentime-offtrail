@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  width: 162px;
+  width: clamp(162px, 42vw, 220px);
   aspect-ratio: 162 / 221;
   flex-shrink: 0;
   padding: var(--otds-size-padding-small);

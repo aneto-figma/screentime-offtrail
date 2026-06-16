@@ -3,7 +3,8 @@ import Avatar from './components/Avatar/Avatar'
 import Button from './components/Button/Button'
 import TileCallout from './components/TileCallout/TileCallout'
 import CardEvent from './components/CardEvent/CardEvent'
-import Nav from './components/Nav/Nav'
+import AppShell from './components/AppShell/AppShell'
+import DesktopTopNav from './components/DesktopTopNav/DesktopTopNav'
 import { getEvent } from './data/events'
 import './Profile.css'
 
@@ -17,8 +18,8 @@ export default function Profile() {
   const openEvent = (id) => navigate(`/event/${id}`)
 
   return (
-    <div className="profile">
-      <div className="profile__content">
+    <AppShell active="Profile" className="profile" contentClassName="profile__content">
+        <DesktopTopNav tone="dark" />
         {/* Avatar + identity */}
         <section className="profile__avatar-section">
           <div className="profile__header">
@@ -32,13 +33,11 @@ export default function Profile() {
             <Button label="Edit" colour="transparent-white" size="medium" />
             <Button label="Share" colour="transparent-white" size="medium" />
           </div>
-        </section>
-
-        {/* Event highlights */}
-        <section className="profile__stats">
-          <TileCallout variant="Highlight" label="HOSTED" value="12" />
-          <TileCallout variant="Highlight" label="FOLLOWERS" value="148" />
-          <TileCallout variant="Highlight" label="HOST RATING" value="4.9" />
+          <div className="profile__stats">
+            <TileCallout variant="Highlight" label="HOSTED" value="12" />
+            <TileCallout variant="Highlight" label="FOLLOWERS" value="148" />
+            <TileCallout variant="Highlight" label="HOST RATING" value="4.9" />
+          </div>
         </section>
 
         {/* Upcoming events */}
@@ -58,7 +57,7 @@ export default function Profile() {
         </section>
 
         {/* Past events */}
-        <section className="profile__section">
+        <section className="profile__section profile__section--past">
           <p className="profile__section-title">Past events</p>
           <CardEvent
             src={past.src}
@@ -69,12 +68,22 @@ export default function Profile() {
             size="large"
             month={past.month}
             day={past.day}
+            className="profile__past-mobile"
+            onClick={() => openEvent(past.id)}
+          />
+          <CardEvent
+            src={past.src}
+            title={past.title}
+            location={past.location}
+            people={past.people}
+            time={past.time}
+            size="small"
+            month={past.month}
+            day={past.day}
+            className="profile__past-desktop"
             onClick={() => openEvent(past.id)}
           />
         </section>
-      </div>
-
-      <Nav active="Profile" />
-    </div>
+    </AppShell>
   )
 }

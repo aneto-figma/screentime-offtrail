@@ -1,8 +1,4 @@
 .profile {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100svh;
   background-color: var(--otds-bg-brand-primary);
 }
 
@@ -11,13 +7,12 @@
 .profile__content {
   display: flex;
   flex-direction: column;
-  gap: var(--otds-size-padding-xlarge);
-  flex: 1 1 0;
+  gap: var(--otds-app-density-block);
   min-height: 0;
   width: 100%;
   overflow-y: auto;
-  padding: var(--otds-size-padding-medium);
-  box-sizing: border-box;
+  padding: var(--otds-app-gutter-block) var(--otds-app-gutter-inline)
+    calc(var(--otds-app-content-bottom) + var(--otds-app-gutter-block));
 }
 
 /* --- Avatar / identity section --- */
@@ -100,4 +95,48 @@
   line-height: 1.3;
   color: var(--otds-color-primary);
   margin: 0;
+}
+
+.profile__past-desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .profile .app-shell__nav {
+    display: none;
+  }
+
+  .profile__content {
+    display: grid;
+    grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+    align-content: start;
+    align-items: start;
+    gap: var(--otds-app-grid-gap);
+    max-width: var(--otds-app-page-max);
+    margin: 0 auto;
+    padding-bottom: var(--otds-app-gutter-block);
+  }
+
+  .profile__avatar-section {
+    grid-column: 1;
+    position: sticky;
+    top: var(--otds-app-gutter-block);
+  }
+
+  .profile__section {
+    grid-column: 2;
+  }
+
+  .profile__stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .profile__past-mobile {
+    display: none;
+  }
+
+  .profile__past-desktop {
+    display: block;
+  }
 }

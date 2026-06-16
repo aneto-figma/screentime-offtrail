@@ -44,3 +44,25 @@ export const WithChips = {
     </Carousel>
   ),
 }
+
+export const MobileWidth = {
+  ...WithGuides,
+  decorators: [
+    (Story) => (
+      <div style={{ width: 390, maxWidth: '100%' }}>
+        {Story()}
+      </div>
+    ),
+  ],
+}
+
+export const DesktopWidth = {
+  ...WithGuides,
+  decorators: [
+    (Story) => (
+      <div style={{ width: 760, maxWidth: '100%' }}>
+        {Story()}
+      </div>
+    ),
+  ],
+}

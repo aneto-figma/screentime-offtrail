@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--otds-size-gap-medium);
+  container-type: inline-size;
 }
 
 .carousel__header {
@@ -44,4 +45,54 @@
 
 .carousel__track::-webkit-scrollbar {
   display: none;
+}
+
+.carousel__controls {
+  display: flex;
+  gap: var(--otds-size-gap-small);
+}
+
+.carousel__control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+
+.carousel__control:hover:not(:disabled) {
+  opacity: 1;
+}
+
+.carousel__control:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.carousel--has-controls .carousel__track {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+@container (min-width: 640px) {
+  .carousel__track {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .carousel--has-controls .carousel__track {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
 }

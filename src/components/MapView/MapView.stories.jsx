@@ -33,7 +33,7 @@ export const Full = {
   decorators: [
     (Story) => (
       <div style={{ width: '430px', height: '562px' }}>
-        <Story />
+        {Story()}
       </div>
     ),
   ],
@@ -48,6 +48,28 @@ export const Card = {
     interactive: false,
     showUserLocation: true,
   },
+}
+
+export const ResponsiveCard = {
+  args: Card.args,
+  decorators: [
+    (Story) => (
+      <div style={{ width: 640, maxWidth: '100%' }}>
+        {Story()}
+      </div>
+    ),
+  ],
+}
+
+export const DesktopFull = {
+  args: Full.args,
+  decorators: [
+    (Story) => (
+      <div style={{ width: 960, maxWidth: '100%', height: 620 }}>
+        {Story()}
+      </div>
+    ),
+  ],
 }
 
 export const WithMarkers = {
@@ -66,7 +88,7 @@ export const WithMarkers = {
   decorators: [
     (Story) => (
       <div style={{ width: '430px', height: '562px' }}>
-        <Story />
+        {Story()}
       </div>
     ),
   ],

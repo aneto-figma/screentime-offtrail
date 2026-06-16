@@ -38,26 +38,28 @@ export default function CardEvent({
 
   return (
     <div className={classes} {...interactiveProps}>
-      <div className="card-event__image-wrap">
-        <img className="card-event__image" src={src} alt={title} />
-        {size === 'large' && overlay && (
-          <div className="card-event__overlay">{overlay}</div>
-        )}
-      </div>
-      <div className="card-event__info">
-        <div className="card-event__content">
-          <p className="card-event__title">{title}</p>
-          <p className="card-event__location">{location}</p>
-          <div className="card-event__meta">
-            <div className="card-event__people">
-              <Icon glyph="person" />
-              <p className="card-event__meta-text">{people}</p>
-            </div>
-            <div className="card-event__dot" />
-            <p className="card-event__meta-text">{time}</p>
-          </div>
+      <div className="card-event__layout">
+        <div className="card-event__image-wrap">
+          <img className="card-event__image" src={src} alt={title} />
+          {size === 'large' && overlay && (
+            <div className="card-event__overlay">{overlay}</div>
+          )}
         </div>
-        <TileDate month={month} day={day} />
+        <div className="card-event__info">
+          <div className="card-event__content">
+            <p className="card-event__title">{title}</p>
+            <p className="card-event__location">{location}</p>
+            <div className="card-event__meta">
+              <div className="card-event__people">
+                <Icon glyph="person" />
+                <p className="card-event__meta-text">{people}</p>
+              </div>
+              <div className="card-event__dot" />
+              <p className="card-event__meta-text">{time}</p>
+            </div>
+          </div>
+          <TileDate month={month} day={day} />
+        </div>
       </div>
     </div>
   )
