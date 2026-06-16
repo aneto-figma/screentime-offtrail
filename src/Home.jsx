@@ -157,22 +157,6 @@ export default function Home() {
               low="42°"
               high="67°"
             />
-            <div className="home-desktop__search" aria-label="Search events">
-              {[
-                ['Where', 'Search locations'],
-                ['What', 'Search activities'],
-                ['When', 'Search dates'],
-              ].map(([label, value]) => (
-                <div className="home-desktop__search-field" key={label}>
-                  <span>{label}</span>
-                  <p>{value}</p>
-                </div>
-              ))}
-              <button className="home-desktop__search-button" type="button">
-                <BrandIcon glyph="search" />
-                <span className="home-desktop__sr-only">Search</span>
-              </button>
-            </div>
           </div>
 
           <div className="home-desktop__featured-panel">

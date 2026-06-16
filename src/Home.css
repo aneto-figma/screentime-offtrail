@@ -807,7 +807,8 @@
     gap: var(--otds-size-padding-xlarge);
     padding: 64px var(--otds-size-padding-large) var(--otds-size-padding-large);
     color: var(--otds-white-100);
-    background: var(--otds-black-100);
+    background: transparent;
+    border-radius: 0;
   }
 
   .home__desktop .home__heading {
