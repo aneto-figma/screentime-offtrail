@@ -35,12 +35,15 @@ export default function Map() {
           ]}
         />
 
-        <div className="map-screen__search">
+        <div className="map-screen__search map-screen__search--mobile">
           <SearchInput placeholder="Find things to do..." />
         </div>
       </div>
 
       <BottomSheet size="Default" className="map-screen__sheet">
+        <div className="map-screen__search map-screen__search--desktop">
+          <SearchInput placeholder="Find things to do..." />
+        </div>
         <div className="map-screen__tabs">
           {FILTERS.map((label, i) => (
             <Chip key={label} label={label} active={i === 0} />

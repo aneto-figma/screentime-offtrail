@@ -36,6 +36,10 @@
   z-index: 3;
 }
 
+.map-screen__search--desktop {
+  display: none;
+}
+
 /* --- Filter chips --- */
 
 .map-screen__tabs {
@@ -80,23 +84,33 @@
     flex: 1 1 auto;
   }
 
-  .map-screen__search {
-    top: var(--otds-app-gutter-block);
-    left: calc(var(--otds-app-gutter-inline) + var(--otds-app-panel-width) + var(--otds-app-gutter-inline));
-    right: var(--otds-app-gutter-inline);
-    width: auto;
-    justify-content: center;
+  .map-screen__search--mobile {
+    display: none;
+  }
+
+  .map-screen__search--desktop {
+    display: flex;
+    position: static;
+    padding: var(--otds-size-padding-medium) var(--otds-size-padding-medium) 0;
+    flex-shrink: 0;
+  }
+
+  .map-screen__search--desktop .search-input {
+    width: 100%;
   }
 
   .map-screen__sheet {
     position: absolute;
-    top: var(--otds-app-gutter-block);
+    top: 80px;
     left: var(--otds-app-gutter-inline);
     bottom: var(--otds-app-gutter-block);
     width: var(--otds-app-panel-width);
     height: auto;
     border-radius: var(--otds-size-corner-large);
-    border: 1px solid var(--otds-color-dim);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--otds-white-600);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     z-index: 2;
   }
 
