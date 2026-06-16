@@ -198,6 +198,7 @@ export default function Home() {
               location="Los Angeles"
               mode="Dark"
               className="home-desktop__nearby-tile"
+              onClick={() => navigate('/map')}
             />
           </section>
 

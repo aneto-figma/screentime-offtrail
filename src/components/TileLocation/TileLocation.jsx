@@ -29,6 +29,7 @@ export default function TileLocation({
   longitude = -118.25,
   mode = 'Dark',
   className = '',
+  onClick,
 }) {
   const radar = radarImages[mode]
   const classes = [
@@ -38,7 +39,7 @@ export default function TileLocation({
   ].filter(Boolean).join(' ')
 
   return (
-    <div className={classes}>
+    <div className={classes} onClick={onClick} role={onClick ? 'button' : undefined} style={onClick ? { cursor: 'pointer' } : undefined}>
 
       {/* Map background — centered on the marker; CSS anchors its center
           to (right: 64px, bottom: 54px) of the tile */}
