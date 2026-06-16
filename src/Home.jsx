@@ -161,7 +161,7 @@ export default function Home() {
 
           <div className="home-desktop__featured-panel">
             <div className="home-desktop__panel-heading">
-              <p className="home__section-title">Featured</p>
+              <p className="home__section-title"> </p>
             </div>
             <CardEvent
               className="home-desktop__featured-card"

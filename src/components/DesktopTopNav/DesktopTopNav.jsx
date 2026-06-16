@@ -7,7 +7,6 @@ import './DesktopTopNav.css'
 
 const navItems = [
   { label: 'Explore', path: '/home' },
-  { label: 'Hosts', path: '/profile' },
   { label: 'Map', path: '/map' },
 ]
 

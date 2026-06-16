@@ -4,6 +4,7 @@ import Button from './components/Button/Button'
 import TileCallout from './components/TileCallout/TileCallout'
 import CardEvent from './components/CardEvent/CardEvent'
 import AppShell from './components/AppShell/AppShell'
+import DesktopTopNav from './components/DesktopTopNav/DesktopTopNav'
 import { getEvent } from './data/events'
 import './Profile.css'
 
@@ -18,6 +19,7 @@ export default function Profile() {
 
   return (
     <AppShell active="Profile" className="profile" contentClassName="profile__content">
+        <DesktopTopNav tone="dark" />
         {/* Avatar + identity */}
         <section className="profile__avatar-section">
           <div className="profile__header">

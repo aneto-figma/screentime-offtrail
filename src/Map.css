@@ -68,6 +68,10 @@
 }
 
 @media (min-width: 1024px) {
+  .map-screen .app-shell__nav {
+    display: none;
+  }
+
   .map-screen__content {
     position: relative;
   }

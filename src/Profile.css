@@ -102,6 +102,10 @@
 }
 
 @media (min-width: 1024px) {
+  .profile .app-shell__nav {
+    display: none;
+  }
+
   .profile__content {
     display: grid;
     grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);

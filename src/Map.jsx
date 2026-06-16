@@ -5,6 +5,7 @@ import Chip from './components/Chip/Chip'
 import BottomSheet from './components/BottomSheet/BottomSheet'
 import CardEvent from './components/CardEvent/CardEvent'
 import AppShell from './components/AppShell/AppShell'
+import DesktopTopNav from './components/DesktopTopNav/DesktopTopNav'
 import { getEvent } from './data/events'
 import './Map.css'
 
@@ -18,6 +19,7 @@ export default function Map() {
 
   return (
     <AppShell active="Map" className="map-screen" contentClassName="map-screen__content">
+      <DesktopTopNav tone="dark" />
       <div className="map-screen__map-region">
         <MapView
           className="map-screen__map"
