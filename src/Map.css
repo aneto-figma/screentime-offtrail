@@ -131,6 +131,6 @@
   }
 
   .map-screen__events {
-    padding: var(--otds-size-padding-medium) var(--otds-app-gutter);
+    padding: var(--otds-size-padding-medium) 16px;
   }
 }
