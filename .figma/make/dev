@@ -2,4 +2,4 @@
 set -e
 
 echo "Starting development server"
-npm run dev
+exec pnpm run dev --port "${PORT:-5173}"

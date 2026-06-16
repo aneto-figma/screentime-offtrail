@@ -5,20 +5,20 @@ React and Vite prototype for the Screentime Offtrail experience.
 ## Prerequisites
 
 - Node.js
-- npm
+- pnpm
 
-This repo uses `package-lock.json`, so use npm for dependency installs.
+This repo uses `pnpm-lock.yaml`, so use pnpm for dependency installs.
 
 ## Install Dependencies
 
 ```sh
-npm install
+pnpm install
 ```
 
-For a clean install that exactly matches `package-lock.json`, use:
+For a clean install that exactly matches `pnpm-lock.yaml`, use:
 
 ```sh
-npm ci
+pnpm install --frozen-lockfile
 ```
 
 ## Run The App
@@ -26,7 +26,7 @@ npm ci
 Start the Vite development server:
 
 ```sh
-npm run dev
+pnpm dev
 ```
 
 Vite will print the local URL in the terminal. By default, it is usually:
@@ -40,7 +40,7 @@ http://localhost:5173/
 Start the Storybook development server:
 
 ```sh
-npm run storybook
+pnpm storybook
 ```
 
 Storybook runs on:
@@ -54,25 +54,25 @@ Stories are loaded from `src/**/*.mdx` and `src/**/*.stories.@(js|jsx|mjs|ts|tsx
 ## Useful Commands
 
 ```sh
-npm run build
+pnpm build
 ```
 
 Builds the Vite app into `dist/`.
 
 ```sh
-npm run preview
+pnpm preview
 ```
 
-Serves the production build locally after `npm run build`.
+Serves the production build locally after `pnpm build`.
 
 ```sh
-npm run build-storybook
+pnpm build-storybook
 ```
 
 Builds the static Storybook site into `storybook-static/`.
 
 ```sh
-npm run lint
+pnpm lint
 ```
 
 Runs ESLint across the repo.

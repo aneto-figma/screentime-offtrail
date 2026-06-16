@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
 
-echo "Running npm install"
-npm install
-echo "Dependencies installed."
+echo "Running pnpm install"
+exec pnpm install
