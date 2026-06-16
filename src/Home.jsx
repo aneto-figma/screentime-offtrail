@@ -180,7 +180,7 @@ export default function Home() {
 
         <div className="home-desktop__workspace">
           <section className="home-desktop__panel home-desktop__panel--guides">
-            <Carousel title="Guides">
+            <Carousel title="Guides" showControls>
               <CardGuide src={imgAmelia} name="Amelia B." category="SURFING" />
               <CardGuide src={imgTeresa} name="Teresa M." category="MEDITATION" />
               <CardGuide src={imgKarim} name="Karim N." category="HIKING" />
@@ -196,7 +196,7 @@ export default function Home() {
             </div>
             <TileLocation
               location="Los Angeles"
-              mode="Light"
+              mode="Dark"
               className="home-desktop__nearby-tile"
             />
           </section>

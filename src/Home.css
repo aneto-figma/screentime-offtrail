@@ -978,8 +978,8 @@
 
   .home-desktop__panel--nearby {
     grid-area: nearby;
-    color: var(--otds-black-100);
-    background: var(--otds-blue-500);
+    color: var(--otds-white-100);
+    background: transparent;
   }
 
   .home-desktop__panel--upcoming {
@@ -998,6 +998,11 @@
     padding: 0;
   }
 
+  .home-desktop__panel--guides .carousel--has-controls .carousel__track {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
   .home-desktop__panel--guides .card-guide {
     width: 170px;
   }
@@ -1005,8 +1010,8 @@
   .home-desktop__nearby-tile.tile-location {
     height: 100%;
     min-height: 244px;
-    border-color: rgba(16, 7, 27, 0.16);
-    background: rgba(255, 255, 255, 0.24);
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.06);
   }
 
   .home-desktop__events-grid {
