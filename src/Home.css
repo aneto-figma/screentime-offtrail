@@ -78,7 +78,7 @@
   line-height: 1;
   letter-spacing: var(--otds-size-letter-spacing-snug);
   color: var(--otds-color-primary);
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 /* --- Section headers --- */
@@ -831,6 +831,7 @@
     font-weight: 400;
     font-size: 80px;
     color: var(--otds-white-100);
+    text-transform: uppercase;
   }
 
   .home-desktop__weather.tile-weather {
