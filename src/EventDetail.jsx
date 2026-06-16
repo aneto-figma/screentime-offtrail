@@ -223,6 +223,14 @@ export default function EventDetail() {
           </div>
 
           <aside className="event-detail-desktop__side">
+            <EventNav
+              price={event.price}
+              time={event.time}
+              location={event.city}
+              buttonLabel={event.cta}
+              className="event-detail-desktop__nav"
+            />
+
             <section className="event-detail-desktop__section">
               <p className="event-detail__label">WHERE</p>
               <div className="event-detail__where-text">
@@ -252,14 +260,6 @@ export default function EventDetail() {
               </div>
               <p className="event-detail__spots">{event.spotsLeft}</p>
             </section>
-
-            <EventNav
-              price={event.price}
-              time={event.time}
-              location={event.city}
-              buttonLabel={event.cta}
-              className="event-detail-desktop__nav"
-            />
           </aside>
         </main>
       </div>

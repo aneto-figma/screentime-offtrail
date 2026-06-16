@@ -699,12 +699,14 @@
   }
 
   .event-detail-desktop__primary {
-    gap: 48px;
+    gap: 24px 48px;
     padding: 64px var(--otds-size-padding-xlarge);
   }
 
   .event-detail-desktop__side {
-    gap: 40px;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px 40px;
     padding: var(--otds-size-padding-large);
   }
 
@@ -717,7 +719,7 @@
   }
 
   .event-detail-desktop__section + .event-detail-desktop__section {
-    padding-top: 48px;
+    padding-top: 0;
     border-top: 1px solid var(--otds-white-600);
   }
 
@@ -781,7 +783,8 @@
 
   .event-detail .event-detail-desktop__nav.event-nav {
     position: static;
-    margin-top: auto;
+    margin-top: 42px;
+    margin-bottom: 42px;
     padding: var(--otds-size-padding-medium);
     border: 1px solid rgba(187, 228, 255, 0.2);
     border-radius: 6px;
