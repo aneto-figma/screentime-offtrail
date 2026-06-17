@@ -1,9 +1,9 @@
 import Carousel from './Carousel'
 import CardGuide from '../CardGuide/CardGuide'
 import Chip from '../Chip/Chip'
-import portraitSrc from '../../../assets/images/portraits/Portrait-05.png'
-import portraitSrc2 from '../../../assets/images/portraits/Portrait-12.png'
-import portraitSrc3 from '../../../assets/images/portraits/Portrait-13.png'
+const portraitSrc = 'https://static.figma.com/uploads/a760126f639ca34680e11f727e7593119d9c44fe'
+const portraitSrc2 = 'https://static.figma.com/uploads/f7e2ba11c6a11c6d7712a56321a70b474a3dbc53'
+const portraitSrc3 = 'https://static.figma.com/uploads/8bc77a91af9a6bae4d369a5d2768f26cd66e2c03'
 
 export default {
   title: 'Components/Carousel',

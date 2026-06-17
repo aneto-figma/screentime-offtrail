@@ -1,5 +1,5 @@
 import CardGuide from './CardGuide'
-import portraitSrc from '../../../assets/images/portraits/Portrait-01.png'
+const portraitSrc = 'https://static.figma.com/uploads/8eb0c462ff293938b2f59327f4fddb5cceed1b1c'
 
 export default {
   title: 'Components/CardGuide',

@@ -1,22 +1,22 @@
 // Shared event data used across Home, Map, Profile, and EventDetail screens.
 // Tapping a CardEvent navigates to /event/:id which looks up the entry by id here.
 
-import imgCanyonCrew from '../assets/images/event/Event-01.png'
-import imgWeekendSurf from '../assets/images/event/Event-02.png'
-import imgTrailRun from '../assets/images/event/Event-04.png'
+const imgCanyonCrew = 'https://static.figma.com/uploads/c4873192a4772ee39f42a888fd7cd802dd8f089b'
+const imgWeekendSurf = 'https://static.figma.com/uploads/73896fa4b194c87ed4d059f2ecd8f53b73930c0c'
+const imgTrailRun = 'https://static.figma.com/uploads/bcfff7e005c552916c9b288b5db25aa35f3f54b8'
 import imgMorningRun from '../assets/images/event/Event-54.png'
 import imgHorseback from '../assets/images/event/Event-55.png'
 
-import imgHost1 from '../assets/images/portraits/Portrait-01.png'
-import imgHost2 from '../assets/images/portraits/Portrait-02.png'
-import imgHost3 from '../assets/images/portraits/Portrait-03.png'
-import imgHost4 from '../assets/images/portraits/Portrait-04.png'
-import imgHost6 from '../assets/images/portraits/Portrait-06.png'
-import imgHost7 from '../assets/images/portraits/Portrait-07.png'
-import imgHost8 from '../assets/images/portraits/Portrait-08.png'
-import imgHost9 from '../assets/images/portraits/Portrait-09.png'
-import imgHost10 from '../assets/images/portraits/Portrait-10.png'
-import imgHost11 from '../assets/images/portraits/Portrait-11.png'
+const imgHost1 = 'https://static.figma.com/uploads/8eb0c462ff293938b2f59327f4fddb5cceed1b1c'
+const imgHost2 = 'https://static.figma.com/uploads/48080c69f291b89e052c0d532eba87c3247125ec'
+const imgHost3 = 'https://static.figma.com/uploads/b2b04c73585681e09cafae2502ca6e2d7ea61c03'
+const imgHost4 = 'https://static.figma.com/uploads/d31ce0e0d5bf18c86a5a1dd86027ce2508dcbfd7'
+const imgHost6 = 'https://static.figma.com/uploads/2f2d3067dad7b641f28978c2ff0dea7bb5176622'
+const imgHost7 = 'https://static.figma.com/uploads/a8b0d4c796964d78e11d6452a6c0064f1bec8b10'
+const imgHost8 = 'https://static.figma.com/uploads/cf601dd20ef02c41fa9dc04898039f11d5db267d'
+const imgHost9 = 'https://static.figma.com/uploads/86285ada8df9f7b3d1dc73448bebeba29311b5f9'
+const imgHost10 = 'https://static.figma.com/uploads/ace28180a72c38ef678bf3a6496c7a07d7954dd6'
+const imgHost11 = 'https://static.figma.com/uploads/df86f316812bf0f561138a78a40685fc82b3f226'
 
 const defaultGuests = [imgHost7, imgHost8, imgHost9, imgHost10]
 

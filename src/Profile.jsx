@@ -8,7 +8,7 @@ import DesktopTopNav from './components/ui/DesktopTopNav/DesktopTopNav'
 import { getEvent } from './data/events'
 import './Profile.css'
 
-import imgAvatar from './assets/images/portraits/Portrait-05.png'
+const imgAvatar = 'https://static.figma.com/uploads/a760126f639ca34680e11f727e7593119d9c44fe'
 
 const upcoming = getEvent('morning-run')
 const past = getEvent('horseback')

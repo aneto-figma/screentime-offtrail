@@ -1,5 +1,5 @@
 import CardEvent from './CardEvent'
-import eventSrc from '../../../assets/images/event/Event-01.png'
+const eventSrc = 'https://static.figma.com/uploads/c4873192a4772ee39f42a888fd7cd802dd8f089b'
 
 export default {
   title: 'Components/CardEvent',

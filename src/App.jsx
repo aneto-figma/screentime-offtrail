@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import Logo from './components/ui/Logo/Logo'
 import Button from './components/ui/Button/Button'
-import heroImage from './assets/images/landing-hero.png'
+const heroImage = 'https://static.figma.com/uploads/0cad32c7d724784c58698e7e6205be0099774608'
 import './App.css'
 
 function App() {

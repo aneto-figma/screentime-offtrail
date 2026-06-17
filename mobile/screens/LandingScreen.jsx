@@ -6,7 +6,7 @@ import Button from '../components/Button/Button';
 import useTheme from '../theme/useTheme';
 import { sizes, fonts } from '../theme/tokens';
 
-const heroImage = require('../assets/shared/images/landing-hero.png');
+const heroImage = { uri: 'https://static.figma.com/uploads/0cad32c7d724784c58698e7e6205be0099774608' };
 
 // Ported from src/App.jsx. The image + scrim are the FIRST children inside the
 // flex container and the logo/text/buttons follow as later siblings, so they

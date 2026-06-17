@@ -4,22 +4,22 @@
 // imports become require() calls against the copies in assets/shared/ (sourced
 // from the web app's src/assets/images).
 
-const imgCanyonCrew = require('../assets/shared/images/event/Event-01.png');
-const imgWeekendSurf = require('../assets/shared/images/event/Event-02.png');
-const imgTrailRun = require('../assets/shared/images/event/Event-04.png');
+const imgCanyonCrew = { uri: 'https://static.figma.com/uploads/c4873192a4772ee39f42a888fd7cd802dd8f089b' };
+const imgWeekendSurf = { uri: 'https://static.figma.com/uploads/73896fa4b194c87ed4d059f2ecd8f53b73930c0c' };
+const imgTrailRun = { uri: 'https://static.figma.com/uploads/bcfff7e005c552916c9b288b5db25aa35f3f54b8' };
 const imgMorningRun = require('../assets/shared/images/event/Event-54.png');
 const imgHorseback = require('../assets/shared/images/event/Event-55.png');
 
-const imgHost1 = require('../assets/shared/images/portraits/Portrait-01.png');
-const imgHost2 = require('../assets/shared/images/portraits/Portrait-02.png');
-const imgHost3 = require('../assets/shared/images/portraits/Portrait-03.png');
-const imgHost4 = require('../assets/shared/images/portraits/Portrait-04.png');
-const imgHost6 = require('../assets/shared/images/portraits/Portrait-06.png');
-const imgHost7 = require('../assets/shared/images/portraits/Portrait-07.png');
-const imgHost8 = require('../assets/shared/images/portraits/Portrait-08.png');
-const imgHost9 = require('../assets/shared/images/portraits/Portrait-09.png');
-const imgHost10 = require('../assets/shared/images/portraits/Portrait-10.png');
-const imgHost11 = require('../assets/shared/images/portraits/Portrait-11.png');
+const imgHost1 = { uri: 'https://static.figma.com/uploads/8eb0c462ff293938b2f59327f4fddb5cceed1b1c' };
+const imgHost2 = { uri: 'https://static.figma.com/uploads/48080c69f291b89e052c0d532eba87c3247125ec' };
+const imgHost3 = { uri: 'https://static.figma.com/uploads/b2b04c73585681e09cafae2502ca6e2d7ea61c03' };
+const imgHost4 = { uri: 'https://static.figma.com/uploads/d31ce0e0d5bf18c86a5a1dd86027ce2508dcbfd7' };
+const imgHost6 = { uri: 'https://static.figma.com/uploads/2f2d3067dad7b641f28978c2ff0dea7bb5176622' };
+const imgHost7 = { uri: 'https://static.figma.com/uploads/a8b0d4c796964d78e11d6452a6c0064f1bec8b10' };
+const imgHost8 = { uri: 'https://static.figma.com/uploads/cf601dd20ef02c41fa9dc04898039f11d5db267d' };
+const imgHost9 = { uri: 'https://static.figma.com/uploads/86285ada8df9f7b3d1dc73448bebeba29311b5f9' };
+const imgHost10 = { uri: 'https://static.figma.com/uploads/ace28180a72c38ef678bf3a6496c7a07d7954dd6' };
+const imgHost11 = { uri: 'https://static.figma.com/uploads/df86f316812bf0f561138a78a40685fc82b3f226' };
 
 const defaultGuests = [imgHost7, imgHost8, imgHost9, imgHost10];
 

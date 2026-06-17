@@ -12,9 +12,9 @@ import useTheme from '../theme/useTheme';
 import { sizes, fonts } from '../theme/tokens';
 import { getEvent } from '../data/events';
 
-const imgAmelia = require('../assets/shared/images/portraits/Portrait-05.png');
-const imgTeresa = require('../assets/shared/images/portraits/Portrait-12.png');
-const imgKarim = require('../assets/shared/images/portraits/Portrait-13.png');
+const imgAmelia = { uri: 'https://static.figma.com/uploads/a760126f639ca34680e11f727e7593119d9c44fe' };
+const imgTeresa = { uri: 'https://static.figma.com/uploads/f7e2ba11c6a11c6d7712a56321a70b474a3dbc53' };
+const imgKarim = { uri: 'https://static.figma.com/uploads/8bc77a91af9a6bae4d369a5d2768f26cd66e2c03' };
 
 const featured = getEvent('canyon-crew');
 const morningRun = getEvent('morning-run');

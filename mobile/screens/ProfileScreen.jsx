@@ -9,7 +9,7 @@ import useTheme from '../theme/useTheme';
 import { sizes, fonts } from '../theme/tokens';
 import { getEvent } from '../data/events';
 
-const imgAvatar = require('../assets/shared/images/portraits/Portrait-05.png');
+const imgAvatar = { uri: 'https://static.figma.com/uploads/a760126f639ca34680e11f727e7593119d9c44fe' };
 
 const upcoming = getEvent('morning-run');
 const past = getEvent('horseback');

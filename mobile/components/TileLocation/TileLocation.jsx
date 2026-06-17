@@ -11,14 +11,14 @@ import { sizes, fonts } from '../../theme/tokens';
 // like the web version so its center sits under the radar/pin.
 const radar = {
   Dark: {
-    outer: require('../../assets/shared/images/map/radar-dark-outer.png'),
-    ring: require('../../assets/shared/images/map/radar-dark-ring.png'),
-    mid: require('../../assets/shared/images/map/radar-dark-mid.png'),
+    outer: { uri: 'https://static.figma.com/uploads/48c084d597ff4581c17dc1681e5322eef471eab4' },
+    ring: { uri: 'https://static.figma.com/uploads/9c90a2b093d3e2425ecc1323bf6e66ef511ec610' },
+    mid: { uri: 'https://static.figma.com/uploads/cfe5993936e68725ddc8d50b4cf5c5ae87bc260b' },
   },
   Light: {
-    outer: require('../../assets/shared/images/map/radar-light-outer.png'),
-    inner: require('../../assets/shared/images/map/radar-light-inner.png'),
-    mid: require('../../assets/shared/images/map/radar-light-mid.png'),
+    outer: { uri: 'https://static.figma.com/uploads/2d76fa3ec4b81a2424623ecd56ff52bbe1238b55' },
+    inner: { uri: 'https://static.figma.com/uploads/603552d22f3c9c0f9cadb42cedb3c4fbc862581f' },
+    mid: { uri: 'https://static.figma.com/uploads/c0c0bacb2a0cb55fddfa438795199591efaf0cc8' },
   },
 };
 

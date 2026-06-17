@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import Logo from '../Logo/Logo'
 import BrandIcon from '../BrandIcon/BrandIcon'
 import Avatar from '../Avatar/Avatar'
-import avatarImage from '../../../assets/images/portraits/Portrait-09.png'
+const avatarImage = 'https://static.figma.com/uploads/86285ada8df9f7b3d1dc73448bebeba29311b5f9'
 import './DesktopTopNav.css'
 
 const navItems = [
