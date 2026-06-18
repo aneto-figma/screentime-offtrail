@@ -4,8 +4,8 @@
 const imgCanyonCrew = 'https://static.figma.com/uploads/c4873192a4772ee39f42a888fd7cd802dd8f089b'
 const imgWeekendSurf = 'https://static.figma.com/uploads/73896fa4b194c87ed4d059f2ecd8f53b73930c0c'
 const imgTrailRun = 'https://static.figma.com/uploads/bcfff7e005c552916c9b288b5db25aa35f3f54b8'
-import imgMorningRun from '../assets/images/event/Event-54.png'
-import imgHorseback from '../assets/images/event/Event-55.png'
+const imgMorningRun = 'https://static.figma.com/uploads/dac70bcf71da5d16f0edaeb9118f82dd45450d0c'
+const imgHorseback = 'https://static.figma.com/uploads/207e528bb7ce71025b9de246eeb7a72a562c449e'
 
 const imgHost1 = 'https://static.figma.com/uploads/8eb0c462ff293938b2f59327f4fddb5cceed1b1c'
 const imgHost2 = 'https://static.figma.com/uploads/48080c69f291b89e052c0d532eba87c3247125ec'
