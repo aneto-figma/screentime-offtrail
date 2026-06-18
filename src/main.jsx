@@ -8,10 +8,12 @@ import Home from './Home.jsx'
 import Map from './Map.jsx'
 import Profile from './Profile.jsx'
 import EventDetail from './EventDetail.jsx'
+import ScrollToTop from './components/util/ScrollToTop.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/home" element={<Home />} />
