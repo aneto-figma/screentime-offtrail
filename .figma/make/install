@@ -2,4 +2,4 @@
 set -e
 
 echo "Running pnpm install"
-exec pnpm install --no-frozen-lockfile
+exec pnpm install
