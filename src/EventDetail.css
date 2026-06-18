@@ -698,6 +698,7 @@
   .event-detail-desktop__primary {
     gap: 24px 48px;
     padding: 64px var(--otds-size-padding-xlarge);
+    padding-block: var(--otds-app-gutter-block);
   }
 
   .event-detail-desktop__side {
@@ -705,6 +706,7 @@
     justify-content: flex-start;
     gap: 24px 40px;
     padding: var(--otds-size-padding-large);
+    padding-top: var(--otds-app-content-bottom);
   }
 
   .event-detail-desktop__section {
