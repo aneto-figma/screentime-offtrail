@@ -1,9 +1,13 @@
 .nav {
-  position: relative;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   height: var(--otds-app-nav-size, 64px);
   background: var(--otds-bg-brand-primary, #10071b);
   border-top: 1px solid var(--otds-color-dim, rgba(255, 255, 255, 0.1));
+  z-index: 10;
 }
 
 .nav__header {
@@ -29,8 +33,11 @@
     display: flex;
     flex-direction: column;
     gap: var(--otds-size-gap-large, 24px);
+    top: 0;
+    bottom: 0;
+    right: auto;
     width: var(--otds-app-nav-size, 96px);
-    height: 100svh;
+    height: auto;
     padding: var(--otds-size-padding-xlarge, 32px) 0;
     border-top: 0;
     border-right: 1px solid var(--otds-color-dim, rgba(255, 255, 255, 0.1));
