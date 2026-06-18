@@ -718,7 +718,7 @@
   }
 
   .event-detail-desktop__section + .event-detail-desktop__section {
-    padding-top: 0;
+    padding-top: 8px;
     border-top: 1px solid var(--otds-white-600);
   }
 
