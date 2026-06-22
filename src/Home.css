@@ -249,7 +249,7 @@
     font-family: var(--otds-font-family-headline);
     font-size: 80px;
     font-weight: 400;
-    font-variation-settings: 'BLED' 0, 'SCAN' 26;
+    font-variation-settings: 'BLED' 0, 'SCAN' 0;
     line-height: 1;
     color: inherit;
     text-align: center;
@@ -378,7 +378,7 @@
     font-family: var(--otds-font-family-headline);
     font-size: 80px;
     font-weight: 400;
-    font-variation-settings: 'BLED' 0, 'SCAN' 26;
+    font-variation-settings: 'BLED' 0, 'SCAN' 0;
     line-height: 1;
     color: var(--otds-black-100);
     text-transform: uppercase;
@@ -577,7 +577,7 @@
     font-family: var(--otds-font-family-headline);
     font-size: 80px;
     font-weight: 400;
-    font-variation-settings: 'BLED' 0, 'SCAN' 26;
+    font-variation-settings: 'BLED' 0, 'SCAN' 0;
     line-height: 1;
     color: var(--otds-black-100);
     text-align: center;
@@ -824,6 +824,7 @@
 
   .home__desktop .home__heading-title {
     font-family: var(--otds-font-family-headline);
+    font-variation-settings: 'BLED' 0, 'SCAN' 0;
     font-weight: 400;
     font-size: 80px;
     color: var(--otds-white-100);

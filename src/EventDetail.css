@@ -327,7 +327,7 @@
     font-family: var(--otds-font-family-headline);
     font-size: 80px;
     font-weight: 400;
-    font-variation-settings: 'BLED' 0, 'SCAN' 26;
+    font-variation-settings: 'BLED' 0, 'SCAN' 0;
     line-height: 1;
     color: inherit;
     text-transform: uppercase;
@@ -577,7 +577,7 @@
   .event-detail-desktop__timeline-item time {
     font-family: var(--otds-font-family-headline);
     font-size: 80px;
-    font-variation-settings: 'BLED' 0, 'SCAN' 26;
+    font-variation-settings: 'BLED' 0, 'SCAN' 0;
     line-height: 1;
     text-transform: uppercase;
   }
