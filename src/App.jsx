@@ -19,10 +19,7 @@ function App() {
           <div className="landing__scrim" />
           <Logo className="landing__logo" />
           <div className="landing__text">
-            <p className="landing__text-primary">Welcome to Offtrail.</p>
-            <p className="landing__text-secondary">
-              A community built for those who take the scenic route.
-            </p>
+            <p className="landing__text-primary">Welcome</p>
           </div>
           <div className="landing__buttons">
             <Button label="Sign Up" colour="brand" size="large" />
