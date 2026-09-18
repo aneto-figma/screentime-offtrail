@@ -1,0 +1,10 @@
+{
+  "description": "Streamline project setup by inspecting and updating dependencies, ensuring seamless builds for developers while identifying critical codebase issues.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
