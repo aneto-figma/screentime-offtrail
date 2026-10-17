@@ -11,12 +11,12 @@ import DesktopTopNav from './components/ui/DesktopTopNav/DesktopTopNav'
 import { getEvent } from './data/events'
 import './Home.css'
 
-const imgAmelia = 'https://static.figma.com/uploads/a760126f639ca34680e11f727e7593119d9c44fe'
-const imgTeresa = 'https://static.figma.com/uploads/f7e2ba11c6a11c6d7712a56321a70b474a3dbc53'
-const imgKarim = 'https://static.figma.com/uploads/8bc77a91af9a6bae4d369a5d2768f26cd66e2c03'
-const imgJordan = 'https://static.figma.com/uploads/2f2d3067dad7b641f28978c2ff0dea7bb5176622'
-const imgMaya = 'https://static.figma.com/uploads/48080c69f291b89e052c0d532eba87c3247125ec'
-const imgLeo = 'https://static.figma.com/uploads/d31ce0e0d5bf18c86a5a1dd86027ce2508dcbfd7'
+const imgAmelia = '/assets/65728.png'
+const imgTeresa = '/assets/0ee49.png'
+const imgKarim = '/assets/f2cb6.png'
+const imgJordan = '/assets/f6bdb.png'
+const imgMaya = '/assets/d0433.png'
+const imgLeo = '/assets/05cbd.png'
 
 const featured = getEvent('canyon-crew')
 const morningRun = getEvent('morning-run')
@@ -149,14 +149,6 @@ export default function Home() {
                 Los Angeles
               </p>
             </div>
-            <TileWeather
-              className="home-desktop__weather"
-              time="3:43PM"
-              conditions="Light Rain"
-              temp="65°F"
-              low="42°"
-              high="67°"
-            />
           </div>
 
           <div className="home-desktop__featured-panel">
@@ -197,6 +189,7 @@ export default function Home() {
             <TileLocation
               location="Los Angeles"
               mode="Dark"
+              snapshotSrc="/assets/944ad.png"
               className="home-desktop__nearby-tile"
               onClick={() => navigate('/map')}
             />

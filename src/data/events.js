@@ -1,11 +1,11 @@
 // Shared event data used across Home, Map, Profile, and EventDetail screens.
 // Tapping a CardEvent navigates to /event/:id which looks up the entry by id here.
 
-const imgCanyonCrew = 'https://static.figma.com/uploads/c4873192a4772ee39f42a888fd7cd802dd8f089b'
-const imgWeekendSurf = 'https://static.figma.com/uploads/73896fa4b194c87ed4d059f2ecd8f53b73930c0c'
-const imgTrailRun = 'https://static.figma.com/uploads/bcfff7e005c552916c9b288b5db25aa35f3f54b8'
-const imgMorningRun = 'https://static.figma.com/uploads/dac70bcf71da5d16f0edaeb9118f82dd45450d0c'
-const imgHorseback = 'https://static.figma.com/uploads/207e528bb7ce71025b9de246eeb7a72a562c449e'
+const imgCanyonCrew = '/assets/9b56e.png'
+const imgWeekendSurf = '/assets/ea914.png'
+const imgTrailRun = '/assets/3bc5c.png'
+const imgMorningRun = '/assets/a0183.png'
+const imgHorseback = '/assets/48f10.png'
 
 const imgHost1 = 'https://static.figma.com/uploads/8eb0c462ff293938b2f59327f4fddb5cceed1b1c'
 const imgHost2 = 'https://static.figma.com/uploads/48080c69f291b89e052c0d532eba87c3247125ec'

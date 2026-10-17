@@ -46,6 +46,15 @@
   transform: translate(50%, 50%);
 }
 
+.tile-location__map-snapshot {
+  position: absolute;
+  top: -22%;
+  left: -15%;
+  width: 199%;
+  height: 198%;
+  object-fit: cover;
+}
+
 .tile-location__map .map-view__shade {
   display: none;
 }
