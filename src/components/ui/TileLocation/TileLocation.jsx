@@ -1,7 +1,7 @@
-const radarDarkOuter = 'https://static.figma.com/uploads/48c084d597ff4581c17dc1681e5322eef471eab4'
-const radarDarkRing = 'https://static.figma.com/uploads/9c90a2b093d3e2425ecc1323bf6e66ef511ec610'
-const radarDarkInner = 'https://static.figma.com/uploads/733099650817fb9a95ea06948ad9ac87eac3d7da'
-const radarDarkMid = 'https://static.figma.com/uploads/cfe5993936e68725ddc8d50b4cf5c5ae87bc260b'
+const radarDarkOuter = '/assets/c64b1.png'
+const radarDarkRing = '/assets/f75ce.png'
+const radarDarkInner = '/assets/26517.svg'
+const radarDarkMid = '/assets/3e2f9.png'
 const radarLightOuter = 'https://static.figma.com/uploads/2d76fa3ec4b81a2424623ecd56ff52bbe1238b55'
 const radarLightRing = 'https://static.figma.com/uploads/b1d4f8a6ff5564acc75c4ade622d6cf57e0d4f03'
 const radarLightInner = 'https://static.figma.com/uploads/603552d22f3c9c0f9cadb42cedb3c4fbc862581f'
@@ -28,6 +28,7 @@ export default function TileLocation({
   latitude = 34.07,
   longitude = -118.25,
   mode = 'Dark',
+  snapshotSrc,
   className = '',
   onClick,
 }) {
@@ -43,17 +44,21 @@ export default function TileLocation({
 
       {/* Map background — centered on the marker; CSS anchors its center
           to (right: 64px, bottom: 54px) of the tile */}
-      <MapView
-        className="tile-location__map"
-        variant="full"
-        mode={mode}
-        latitude={latitude}
-        longitude={longitude}
-        zoom={14}
-        interactive={false}
-        showUserLocation={false}
-        labels={false}
-      />
+      {snapshotSrc ? (
+        <img className="tile-location__map-snapshot" src={snapshotSrc} alt="" />
+      ) : (
+        <MapView
+          className="tile-location__map"
+          variant="full"
+          mode={mode}
+          latitude={latitude}
+          longitude={longitude}
+          zoom={14}
+          interactive={false}
+          showUserLocation={false}
+          labels={false}
+        />
+      )}
       <div className="tile-location__overlay" />
 
       {/* Radar rings */}
