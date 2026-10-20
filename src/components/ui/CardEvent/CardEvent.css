@@ -136,6 +136,13 @@
   height: 12px;
 }
 
+.card-event__people-icon {
+  display: block;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
 .card-event__meta-text {
   font-family: var(--otds-font-family-mono);
   font-size: var(--otds-size-font-small);
@@ -152,6 +159,13 @@
   height: 2px;
   border-radius: 50%;
   background: var(--otds-color-secondary);
+  flex-shrink: 0;
+}
+
+.card-event__separator {
+  display: block;
+  width: 2px;
+  height: 2px;
   flex-shrink: 0;
 }
 

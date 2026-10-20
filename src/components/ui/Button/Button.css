@@ -30,6 +30,16 @@
   color: var(--otds-color-on-reverse);
 }
 
+.button--reverse {
+  background-color: var(--otds-color-primary);
+  color: var(--otds-bg-brand-primary);
+}
+
+.button--reverse.button--medium {
+  align-items: center;
+  justify-content: center;
+}
+
 .button--transparent-white {
   background-color: var(--otds-bg-on-brand);
   color: var(--otds-color-primary);

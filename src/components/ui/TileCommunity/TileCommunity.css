@@ -37,7 +37,16 @@
 }
 
 .tile-community__icon {
+  width: 12px;
+  height: 12px;
   color: var(--otds-color-alt);
+  flex-shrink: 0;
+}
+
+.tile-community__icon-image {
+  display: block;
+  width: 12px;
+  height: 12px;
   flex-shrink: 0;
 }
 
