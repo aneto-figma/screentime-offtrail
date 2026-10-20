@@ -3,6 +3,7 @@ import './Button.css'
 
 const colourClassMap = {
   brand: 'button--brand',
+  reverse: 'button--reverse',
   'transparent-white': 'button--transparent-white',
   'transparent-black': 'button--transparent-black',
 }

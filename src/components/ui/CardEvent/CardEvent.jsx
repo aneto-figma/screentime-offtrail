@@ -10,6 +10,8 @@ export default function CardEvent({
   time = '6:30AM – 1:00PM',
   month = 'Jun',
   day = '12',
+  peopleIconSrc,
+  separatorSrc,
   size = 'large',
   overlay = '',
   onClick,
@@ -51,10 +53,28 @@ export default function CardEvent({
             <p className="card-event__location">{location}</p>
             <div className="card-event__meta">
               <div className="card-event__people">
-                <Icon glyph="person" />
+                {peopleIconSrc ? (
+                  <img
+                    className="card-event__people-icon"
+                    src={peopleIconSrc}
+                    alt=""
+                    aria-hidden="true"
+                  />
+                ) : (
+                  <Icon glyph="person" />
+                )}
                 <p className="card-event__meta-text">{people}</p>
               </div>
-              <div className="card-event__dot" />
+              {separatorSrc ? (
+                <img
+                  className="card-event__separator"
+                  src={separatorSrc}
+                  alt=""
+                  aria-hidden="true"
+                />
+              ) : (
+                <div className="card-event__dot" />
+              )}
               <p className="card-event__meta-text">{time}</p>
             </div>
           </div>

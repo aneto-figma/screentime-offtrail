@@ -1,3 +1,31 @@
+@font-face {
+  font-family: 'Geist Mono:Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://static.figma.com/font/GeistMono_wght__1') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter:Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://static.figma.com/font/Inter_1') format('woff2');
+}
+
+@font-face {
+  font-family: 'Workbench:Close';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://static.figma.com/font/Workbench_BLED_SCAN__1') format('woff2');
+}
+
+@font-face {
+  font-family: 'Workbench:Overlapping';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://static.figma.com/font/Workbench_BLED_SCAN__1') format('woff2');
+}
+
 :root {
   /* --- Existing app tokens --- */
   --text: #9ca3af;
@@ -30,6 +58,7 @@
   --otds-size-font-large: 18px;
   --otds-size-font-medium: 16px;
   --otds-size-font-small: 14px;
+  --otds-size-font-xsmall: 12px;
   --otds-size-font-body: 16px;
   --otds-size-font-heading: 24px;
 
