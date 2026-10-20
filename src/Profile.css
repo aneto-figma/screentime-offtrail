@@ -78,6 +78,10 @@
   line-height: 1.3;
 }
 
+.profile__actions .button--reverse {
+  border-radius: var(--otds-size-corner-full);
+}
+
 /* --- Stats / event highlights --- */
 
 .profile__stats {
